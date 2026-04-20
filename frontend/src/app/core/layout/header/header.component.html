@@ -1,18 +1,45 @@
 <header class="site-header">
-  <div class="inner">
-    <a routerLink="/" class="brand">Zacc</a>
+  <div class="site-header__inner">
+    <a routerLink="/" class="brand">
+      <span class="brand__name">Zacc</span>
+      <span class="brand__sub">Színpad</span>
+    </a>
 
-    <nav class="nav">
-      <a routerLink="/">{{ 'nav.home' | translate }}</a>
-      <a routerLink="/tarsulat">{{ 'nav.ensemble' | translate }}</a>
-      <a routerLink="/eloadasok">{{ 'nav.performances' | translate }}</a>
-      <a routerLink="/kapcsolat">{{ 'nav.contact' | translate }}</a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a
+        routerLink="/"
+        routerLinkActive="is-active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        {{ 'nav.home' | translate }}
+      </a>
+
+      <a
+        routerLink="/tarsulat"
+        routerLinkActive="is-active"
+      >
+        {{ 'nav.ensemble' | translate }}
+      </a>
+
+      <a
+        routerLink="/eloadasok"
+        routerLinkActive="is-active"
+      >
+        {{ 'nav.performances' | translate }}
+      </a>
+
+      <a
+        routerLink="/kapcsolat"
+        routerLinkActive="is-active"
+      >
+        {{ 'nav.contact' | translate }}
+      </a>
     </nav>
 
-    <div class="lang-switcher">
-      <button (click)="switchLang('hu')">HU</button>
-      <button (click)="switchLang('en')">EN</button>
-      <button (click)="switchLang('de')">DE</button>
+    <div class="lang-switcher" aria-label="Language switcher">
+      <button type="button" (click)="switchLang('hu')">HU</button>
+      <button type="button" (click)="switchLang('en')">EN</button>
+      <button type="button" (click)="switchLang('de')">DE</button>
     </div>
   </div>
 </header>
