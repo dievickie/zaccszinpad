@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Start",
+    "ensemble": "Ensemble",
+    "performances": "Performances",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "title": "Zacc Bühne",
+    "subtitle": "Unabhängiges künstlerisches Ensemble"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Home",
+    "ensemble": "Ensemble",
+    "performances": "Performances",
+    "contact": "Contact"
+  },
+  "home": {
+    "title": "Zacc Stage",
+    "subtitle": "Independent creative ensemble"
+  }
+}

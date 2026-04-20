@@ -1,0 +1,12 @@
+{
+  "nav": {
+    "home": "Kezdőlap",
+    "ensemble": "Társulat",
+    "performances": "Előadások",
+    "contact": "Kapcsolat"
+  },
+  "home": {
+    "title": "Zacc Színpad",
+    "subtitle": "Független alkotói közösség"
+  }
+}

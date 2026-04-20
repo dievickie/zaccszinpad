@@ -1,0 +1,18 @@
+<header class="site-header">
+  <div class="inner">
+    <a routerLink="/" class="brand">Zacc</a>
+
+    <nav class="nav">
+      <a routerLink="/">{{ 'nav.home' | translate }}</a>
+      <a routerLink="/tarsulat">{{ 'nav.ensemble' | translate }}</a>
+      <a routerLink="/eloadasok">{{ 'nav.performances' | translate }}</a>
+      <a routerLink="/kapcsolat">{{ 'nav.contact' | translate }}</a>
+    </nav>
+
+    <div class="lang-switcher">
+      <button (click)="switchLang('hu')">HU</button>
+      <button (click)="switchLang('en')">EN</button>
+      <button (click)="switchLang('de')">DE</button>
+    </div>
+  </div>
+</header>
