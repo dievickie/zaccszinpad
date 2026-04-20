@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslatePipe } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TranslateModule],
-  template: `
-    <section class="home">
-      <h1>{{ 'home.title' | translate }}</h1>
-      <p>{{ 'home.subtitle' | translate }}</p>
-    </section>
-  `
+  imports: [TranslatePipe, RouterLink],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.scss'
 })
 export class HomeComponent {}

@@ -6,7 +6,35 @@
     "contact": "Contact"
   },
   "home": {
+    "eyebrow": "Independent creative ensemble",
     "title": "Zacc Stage",
-    "subtitle": "Independent creative ensemble"
+    "subtitle": "We create performances, community-based formats and collaborations at the intersections of theatre and live art. Our work seeks openness, presence and genuine connection with audiences.",
+    "ctaPerformances": "Our performances",
+    "ctaContact": "Contact",
+    "intro": {
+      "label": "About us",
+      "title": "Contemporary, collective and evolving theatre work",
+      "text": "Zacc Stage is a creative platform where performances, workshops, open rehearsals and community presence strengthen one another. We value flexibility, personal connection and creating work that can speak across different spaces and contexts."
+    },
+    "cards": {
+      "performances": {
+        "label": "Repertoire",
+        "title": "Performances and bookable productions",
+        "text": "We present selected works that can be adapted to different venues and collaborative settings.",
+        "link": "Go to performances"
+      },
+      "ensemble": {
+        "label": "People",
+        "title": "The ensemble and artist profiles",
+        "text": "The members of the group can also be presented individually, so the site works as both a collective presence and a professional portfolio.",
+        "link": "Go to ensemble"
+      }
+    },
+    "cta": {
+      "label": "Get in touch",
+      "title": "Would you like to collaborate, invite us or learn more?",
+      "text": "We are open to collaborations, invitations and professional exchange.",
+      "button": "Contact us"
+    }
   }
 }

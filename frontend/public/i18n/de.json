@@ -2,11 +2,39 @@
   "nav": {
     "home": "Start",
     "ensemble": "Ensemble",
-    "performances": "Performances",
+    "performances": "Produktionen",
     "contact": "Kontakt"
   },
   "home": {
+    "eyebrow": "Unabhängiges künstlerisches Ensemble",
     "title": "Zacc Bühne",
-    "subtitle": "Unabhängiges künstlerisches Ensemble"
+    "subtitle": "Wir entwickeln Aufführungen, gemeinschaftliche Formate und Kooperationen an den Schnittstellen von Theater und Performance. Unsere Arbeiten suchen Offenheit, Präsenz und echten Kontakt mit dem Publikum.",
+    "ctaPerformances": "Unsere Produktionen",
+    "ctaContact": "Kontakt",
+    "intro": {
+      "label": "Über uns",
+      "title": "Zeitgenössische, kollektive und bewegliche Theaterarbeit",
+      "text": "Die Zacc Bühne ist ein künstlerischer Zusammenhang, in dem Aufführungen, Workshops, offene Proben und gemeinschaftliche Präsenz einander stärken. Wichtig sind uns Flexibilität, persönliche Begegnung und Arbeiten, die in unterschiedlichen Räumen und Kontexten funktionieren."
+    },
+    "cards": {
+      "performances": {
+        "label": "Repertoire",
+        "title": "Produktionen und einladbare Arbeiten",
+        "text": "Wir zeigen ausgewählte Arbeiten, die in unterschiedlichen Spielorten und Kooperationen realisiert werden können.",
+        "link": "Zu den Produktionen"
+      },
+      "ensemble": {
+        "label": "Menschen",
+        "title": "Das Ensemble und künstlerische Profile",
+        "text": "Die Mitglieder des Teams können auch einzeln vorgestellt werden, sodass die Website zugleich als kollektive Präsenz und professionelles Portfolio funktioniert.",
+        "link": "Zum Ensemble"
+      }
+    },
+    "cta": {
+      "label": "Kontakt",
+      "title": "Möchtest du mit uns arbeiten, uns einladen oder mehr erfahren?",
+      "text": "Wir sind offen für Kooperationen, Einladungen und fachlichen Austausch.",
+      "button": "Kontakt aufnehmen"
+    }
   }
 }

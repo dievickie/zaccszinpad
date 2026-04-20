@@ -6,7 +6,35 @@
     "contact": "Kapcsolat"
   },
   "home": {
+    "eyebrow": "Független alkotói közösség",
     "title": "Zacc Színpad",
-    "subtitle": "Független alkotói közösség"
+    "subtitle": "Előadások, közösségi terek és együttműködések határterületein dolgozunk. Olyan színházi és performatív formákat hozunk létre, amelyek nyitottak, élők és kapcsolatot keresnek a nézőkkel.",
+    "ctaPerformances": "Előadásaink",
+    "ctaContact": "Kapcsolat",
+    "intro": {
+      "label": "Rólunk",
+      "title": "Kortárs, közösségi, mozgásban lévő színházi munka",
+      "text": "A Zacc Színpad olyan alkotói közeg, amelyben az előadás, a workshop, a nyílt próba és a közösségi jelenlét egymást erősítve jelenik meg. Fontos számunkra a rugalmasság, a személyesség és az, hogy különböző terekben és helyzetekben is megszólaló munkákat hozzunk létre."
+    },
+    "cards": {
+      "performances": {
+        "label": "Repertoár",
+        "title": "Előadások és meghívható produkciók",
+        "text": "Olyan kiemelt munkáinkat mutatjuk be, amelyek különböző helyszíneken és együttműködésekben is megvalósíthatók.",
+        "link": "Tovább az előadásokhoz"
+      },
+      "ensemble": {
+        "label": "Emberek",
+        "title": "A társulat és alkotói profilok",
+        "text": "A csapat tagjai külön-külön is bemutathatók, így az oldal egyszerre közösségi és szakmai portfólióként is működik.",
+        "link": "Tovább a társulathoz"
+      }
+    },
+    "cta": {
+      "label": "Kapcsolódás",
+      "title": "Dolgoznál velünk, meghívnál minket vagy többet szeretnél tudni?",
+      "text": "Nyitottak vagyunk együttműködésekre, meghívásokra és szakmai kapcsolódásokra.",
+      "button": "Kapcsolatfelvétel"
+    }
   }
 }

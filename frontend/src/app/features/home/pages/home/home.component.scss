@@ -1,0 +1,148 @@
+:host {
+  display: block;
+}
+
+.hero {
+  padding: 5rem 0 4rem;
+}
+
+.hero__content {
+  max-width: 760px;
+}
+
+.hero__eyebrow,
+.section-label,
+.card__label {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #6f4e37;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.05;
+}
+
+.hero__lead {
+  max-width: 640px;
+  margin: 1.5rem 0 0;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.intro,
+.highlights,
+.cta-banner {
+  padding: 2rem 0 3rem;
+}
+
+.section-heading h2,
+.cta-banner h2 {
+  margin: 0;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+}
+
+.intro__text {
+  max-width: 760px;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid #e6dfd7;
+  border-radius: 1.25rem;
+  background: #faf8f5;
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.card p {
+  line-height: 1.7;
+  color: #444;
+}
+
+.cta-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  padding-bottom: 5rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.8rem 1.2rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.button--primary {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.button--primary:hover {
+  opacity: 0.92;
+}
+
+.button--secondary {
+  border: 1px solid #cfc7bf;
+  color: #1f1f1f;
+}
+
+.button--secondary:hover {
+  background: #f3eee8;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #6f4e37;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+  .highlights {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cta-banner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+  }
+}

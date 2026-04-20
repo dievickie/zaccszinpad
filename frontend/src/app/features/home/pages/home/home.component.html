@@ -1,1 +1,61 @@
-<p>home works!</p>
+<section class="hero">
+  <div class="hero__content">
+    <p class="hero__eyebrow">{{ 'home.eyebrow' | translate }}</p>
+    <h1>{{ 'home.title' | translate }}</h1>
+    <p class="hero__lead">
+      {{ 'home.subtitle' | translate }}
+    </p>
+
+    <div class="hero__actions">
+      <a routerLink="/eloadasok" class="button button--primary">
+        {{ 'home.ctaPerformances' | translate }}
+      </a>
+      <a routerLink="/kapcsolat" class="button button--secondary">
+        {{ 'home.ctaContact' | translate }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="section-heading">
+    <p class="section-label">{{ 'home.intro.label' | translate }}</p>
+    <h2>{{ 'home.intro.title' | translate }}</h2>
+  </div>
+
+  <p class="intro__text">
+    {{ 'home.intro.text' | translate }}
+  </p>
+</section>
+
+<section class="highlights">
+  <article class="card">
+    <p class="card__label">{{ 'home.cards.performances.label' | translate }}</p>
+    <h3>{{ 'home.cards.performances.title' | translate }}</h3>
+    <p>{{ 'home.cards.performances.text' | translate }}</p>
+    <a routerLink="/eloadasok" class="text-link">
+      {{ 'home.cards.performances.link' | translate }}
+    </a>
+  </article>
+
+  <article class="card">
+    <p class="card__label">{{ 'home.cards.ensemble.label' | translate }}</p>
+    <h3>{{ 'home.cards.ensemble.title' | translate }}</h3>
+    <p>{{ 'home.cards.ensemble.text' | translate }}</p>
+    <a routerLink="/tarsulat" class="text-link">
+      {{ 'home.cards.ensemble.link' | translate }}
+    </a>
+  </article>
+</section>
+
+<section class="cta-banner">
+  <div>
+    <p class="section-label">{{ 'home.cta.label' | translate }}</p>
+    <h2>{{ 'home.cta.title' | translate }}</h2>
+    <p>{{ 'home.cta.text' | translate }}</p>
+  </div>
+
+  <a routerLink="/kapcsolat" class="button button--primary">
+    {{ 'home.cta.button' | translate }}
+  </a>
+</section>
