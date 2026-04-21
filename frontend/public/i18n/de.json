@@ -45,5 +45,9 @@
   },
   "member": {
     "relatedPerformances": "Verbundene Aufführungen"
+  },
+  "performances": {
+    "back": "← Zurück zu den Aufführungen",
+    "members": "Mitwirkende"
   }
 }

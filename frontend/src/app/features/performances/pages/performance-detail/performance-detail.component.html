@@ -1,0 +1,52 @@
+<section *ngIf="performance as performance" class="performance-detail">
+  <div class="performance-detail__shell">
+
+    <a routerLink="/eloadasok" class="performance-detail__back">
+      {{ 'performances.back' | translate }}
+    </a>
+
+    <h1 class="performance-detail__title">
+      {{ performance.title[currentLanguage] }}
+    </h1>
+
+    <p *ngIf="performance.shortDescription">
+      {{ performance.shortDescription[currentLanguage] }}
+    </p>
+
+    <div *ngIf="performance.longDescription?.length">
+      <p *ngFor="let paragraph of performance.longDescription">
+        {{ paragraph[currentLanguage] }}
+      </p>
+    </div>
+
+    <!-- CREDIT BLOKK -->
+    <section *ngIf="performance.creditGroups?.length">
+      <h2 class="performance-detail__section-title">
+        {{ 'performances.credits' | translate }}
+      </h2>
+
+      <div class="performance-detail__credits">
+        <div
+          class="performance-detail__credit-row"
+          *ngFor="let group of performance.creditGroups"
+        >
+          <span class="performance-detail__credit-label">
+            {{ group.label[currentLanguage] }}:
+          </span>
+
+          <span class="performance-detail__credit-names">
+            {{ group.names.join(', ') }}
+          </span>
+        </div>
+      </div>
+
+      <p
+        *ngIf="performance.creditsNote"
+        class="performance-detail__credits-note"
+      >
+        {{ performance.creditsNote[currentLanguage] }}
+      </p>
+    </section>
+
+  </div>
+</section>

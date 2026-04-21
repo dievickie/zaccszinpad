@@ -1,1 +1,45 @@
-<p>performances works!</p>
+<section class="performances-page">
+  <h1>{{ 'nav.performances' | translate }}</h1>
+
+  <div class="performances-grid">
+    <a
+      *ngFor="let performance of performances"
+      class="performances-grid__link"
+      [routerLink]="['/eloadasok', performance.slug]"
+    >
+      <article class="performance-card">
+        <div
+          class="performance-card__image"
+          *ngIf="performance.imageUrl; else placeholder"
+        >
+          <img
+            [src]="performance.imageUrl || '/assets/images/placeholder.jpg'"
+            [alt]="performance.title[currentLanguage]"
+            class="performance-card__img"
+          />
+        </div>
+
+        <ng-template #placeholder>
+          <div class="performance-card__image performance-card__image--placeholder"></div>
+        </ng-template>
+
+        <div class="performance-card__content">
+        <h2 class="performance-card__title">
+            {{ performance.title[currentLanguage] }}
+        </h2>
+
+        <p *ngIf="performance.shortDescription">
+            {{ performance.shortDescription[currentLanguage] }}
+        </p>
+        <p
+        class="performance-card__credit"
+        *ngIf="performance.creditGroups?.length"
+        >
+        {{ performance.creditGroups?.[0]?.label?.[currentLanguage] }}:
+        {{ performance.creditGroups?.[0]?.names?.[0] }}
+        </p>
+        </div>
+      </article>
+    </a>
+  </div>
+</section>

@@ -45,5 +45,9 @@
   },
   "member": {
     "relatedPerformances": "Kapcsolódó előadások"
+  },
+  "performances": {
+    "back": "← Vissza az előadásokhoz",
+    "members": "Alkotók és szereplők"
   }
 }

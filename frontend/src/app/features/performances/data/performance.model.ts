@@ -1,5 +1,10 @@
 import { LocalizedText } from '../../ensemble/data/member.model';
 
+export interface PerformanceCreditGroup {
+  label: LocalizedText;
+  names: string[];
+}
+
 export interface Performance {
   id: string;
   slug?: string;
@@ -7,5 +12,6 @@ export interface Performance {
   shortDescription?: LocalizedText;
   longDescription?: LocalizedText[];
   imageUrl?: string;
-  memberSlugs?: string[];
+  creditGroups?: PerformanceCreditGroup[];
+  creditsNote?: LocalizedText;
 }
