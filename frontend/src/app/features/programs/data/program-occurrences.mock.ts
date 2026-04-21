@@ -1,90 +1,106 @@
-import { Program } from './program.model';
+import { ProgramOccurrence } from './program.model';
 
-export const PROGRAMS: Program[] = [
+export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
   {
-    slug: 'okulare',
-    title: 'Okuláré Projekt',
-    shortDescription:
-      'Felolvasószínházi estek, kortárs drámaszövegek és közösségi találkozások.',
-    description: [
-      'Az Okuláré Projekt felolvasószínházi estjein új kortárs szövegek, változó alkotói együttállások és közösségi találkozások kerülnek fókuszba.',
-      'Az egyes alkalmak saját résztvevőkkel, saját hangsúlyokkal és külön részletekkel jelennek meg.'
-    ],
-    contactBlock: {
-      title: 'Kapcsolódás',
-      intro:
-        'Ha csatlakoznál az Okuláréhoz, kérdésed van, vagy együttműködésen gondolkodsz, írj nekünk:',
-      email: 'zaccszinpad@gmail.com',
-      facebookUrl: 'https://www.facebook.com/',
-      collaborationLinks: [
-        {
-          label: 'Kollaborációs link 1',
-          url: 'https://example.com/kollaboracio-1'
-        },
-        {
-          label: 'Kollaborációs link 2',
-          url: 'https://example.com/kollaboracio-2'
-        }
-      ]
+    id: 'okulare-el-berlin',
+    seriesId: 'okulare',
+    slug: 'el-berlin',
+    title: {
+      hu: 'ÉL – felolvasószínházi est',
+      en: 'LIVE – staged reading evening',
+      de: 'LEBEN – szenische Lesung'
     },
-    faq: [
+    city: {
+      hu: 'Berlin',
+      en: 'Berlin',
+      de: 'Berlin'
+    },
+    venue: {
+      hu: 'aktuális helyszín',
+      en: 'current venue',
+      de: 'aktueller Ort'
+    },
+    startDate: '2026-05-14T19:00:00',
+    timeLabel: {
+      hu: '19:00',
+      en: '7:00 PM',
+      de: '19:00'
+    },
+    teaser: {
+      hu: 'Három új szöveg, közös meghallgatás, szavazás és találkozás egy este alatt.',
+      en: 'Three new texts, shared listening, voting and encounters in one evening.',
+      de: 'Drei neue Texte, gemeinsames Zuhören, Abstimmen und Begegnung an einem Abend.'
+    },
+    description: [
       {
-        question: 'Milyen nyelvűek az események?',
-        answer:
-          'Az egyes alkalmak nyelve és formátuma eltérhet. A konkrét események részleteinél mindig jelezzük az aktuális információkat.'
+        hu: 'Éljen a kortárs dráma! Az évad egyik legelevenebb témájával érkezik az Okuláré következő alkalma.',
+        en: 'Long live contemporary drama! The next Okulare edition arrives with one of the most vivid themes of the season.',
+        de: 'Es lebe das zeitgenössische Drama! Die nächste Okulare-Ausgabe kommt mit einem der lebendigsten Themen der Saison.'
       },
       {
-        question: 'Lehet késni?',
-        answer:
-          'Kérünk, hogy lehetőség szerint pontosan érkezz. Ha mégis késnél, nézd meg az adott alkalom részleteit, mert helyszínenként eltérhet, hogyan tudsz becsatlakozni.'
-      },
-      {
-        question: 'Lesznek italok a helyszínen?',
-        answer:
-          'Igen, az alkalmakon rendszerint elérhetők italok. A helyszíni hozzájárulásokkal a közös eseményeinket támogatod.'
+        hu: 'Hallgass meg három vadonatúj szöveget, és szavazz a kedvencedre.',
+        en: 'Listen to three brand new texts and vote for your favorite.',
+        de: 'Höre drei brandneue Texte und stimme für deinen Favoriten ab.'
       }
     ],
-    occurrences: [
+    artists: [
+      'Résztvevő művész 1',
+      'Résztvevő művész 2',
+      'Résztvevő művész 3',
+      'Berlini rendező 1'
+    ],
+    isHighlighted: true,
+    isPublic: true
+  },
+  {
+    id: 'okulare-masodik-berlin',
+    seriesId: 'okulare',
+    slug: 'masodik-alkalom-berlin',
+    title: {
+      hu: 'Második Okuláré alkalom',
+      en: 'Second Okulare event',
+      de: 'Zweite Okulare-Ausgabe'
+    },
+    city: {
+      hu: 'Berlin',
+      en: 'Berlin',
+      de: 'Berlin'
+    },
+    venue: {
+      hu: 'aktuális helyszín',
+      en: 'current venue',
+      de: 'aktueller Ort'
+    },
+    startDate: '2026-06-06T20:00:00',
+    timeLabel: {
+      hu: '20:00',
+      en: '8:00 PM',
+      de: '20:00'
+    },
+    teaser: {
+      hu: 'Új felolvasások, új alkotók, új közös fókusz ugyanazon a platformon.',
+      en: 'New readings, new artists and a new shared focus on the same platform.',
+      de: 'Neue Lesungen, neue Künstler:innen und ein neuer gemeinsamer Fokus auf derselben Plattform.'
+    },
+    description: [
       {
-        slug: 'el-berlin',
-        title: 'ÉL – felolvasószínházi est',
-        city: 'Berlin',
-        venue: 'aktuális helyszín',
-        dateLabel: '2026. május 14.',
-        timeLabel: '19:00',
-        teaser:
-          'Három új szöveg, közös meghallgatás, szavazás és találkozás egy este alatt.',
-        description: [
-          'Éljen a kortárs dráma! Az évad egyik legelevenebb témájával érkezik az Okuláré következő alkalma.',
-          'Hallgass meg három vadonatúj szöveget, és szavazz a kedvencedre.'
-        ],
-        artists: [
-          'Résztvevő művész 1',
-          'Résztvevő művész 2',
-          'Résztvevő művész 3',
-          'Berlini rendező 1'
-        ]
+        hu: 'Az Okuláré minden alkalma egyedi összetételben valósul meg.',
+        en: 'Each Okulare edition takes shape in a unique constellation.',
+        de: 'Jede Okulare-Ausgabe entsteht in einer eigenen Konstellation.'
       },
       {
-        slug: 'masodik-alkalom-berlin',
-        title: 'Második Okuláré alkalom',
-        city: 'Berlin',
-        venue: 'aktuális helyszín',
-        dateLabel: '2026. június 6.',
-        timeLabel: '20:00',
-        teaser:
-          'Új felolvasások, új alkotók, új közös fókusz ugyanazon a platformon.',
-        description: [
-          'Az Okuláré minden alkalma egyedi összetételben valósul meg.',
-          'A részleteknél megtalálod az adott esthez kapcsolódó alkotókat és információkat.'
-        ],
-        artists: [
-          'Résztvevő művész A',
-          'Résztvevő művész B',
-          'Résztvevő művész C',
-          'Berlini rendező 2'
-        ]
+        hu: 'A részleteknél megtalálod az adott esthez kapcsolódó alkotókat és információkat.',
+        en: 'In the details you can find the artists and information connected to the evening.',
+        de: 'In den Details findest du die beteiligten Künstler:innen und Informationen zum jeweiligen Abend.'
       }
-    ]
+    ],
+    artists: [
+      'Résztvevő művész A',
+      'Résztvevő művész B',
+      'Résztvevő művész C',
+      'Berlini rendező 2'
+    ],
+    isHighlighted: false,
+    isPublic: true
   }
 ];

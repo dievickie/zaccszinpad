@@ -1,39 +1,48 @@
+export type LocalizedText = {
+  [key: string]: string;
+};
+
 export interface ProgramLink {
   label: string;
   url: string;
 }
 
 export interface ProgramFaqItem {
-  question: string;
-  answer: string;
-}
-
-export interface ProgramOccurrence {
-  slug: string;
-  title: string;
-  city: string;
-  venue?: string;
-  dateLabel: string;
-  timeLabel?: string;
-  teaser?: string;
-  description?: string[];
-  artists?: string[];
+  question: LocalizedText;
+  answer: LocalizedText;
 }
 
 export interface ProgramContactBlock {
-  title: string;
-  intro: string;
+  title: LocalizedText;
+  intro: LocalizedText;
   email: string;
   facebookUrl?: string;
   collaborationLinks?: ProgramLink[];
 }
 
-export interface Program {
+export interface ProgramSeries {
+  id: string;
   slug: string;
-  title: string;
-  shortDescription?: string;
-  description?: string[];
+  title: LocalizedText;
+  shortDescription?: LocalizedText;
+  description?: LocalizedText[];
+  imageUrl?: string;
   faq?: ProgramFaqItem[];
   contactBlock?: ProgramContactBlock;
-  occurrences?: ProgramOccurrence[];
+}
+
+export interface ProgramOccurrence {
+  id: string;
+  seriesId: string;
+  slug: string;
+  title: LocalizedText;
+  city: LocalizedText;
+  venue?: LocalizedText;
+  startDate?: string;
+  timeLabel?: LocalizedText;
+  teaser?: LocalizedText;
+  description?: LocalizedText[];
+  artists?: string[];
+  isHighlighted?: boolean;
+  isPublic?: boolean;
 }

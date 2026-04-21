@@ -1,8 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { PROGRAMS } from '../../data/program-occurrences.mock';
-import { Program, ProgramOccurrence } from '../../data/program.model';
+import { ProcessedProgramOccurrence, ProcessedProgramSeries, PROCESSED_PROGRAM_SERIES } from '../../data/programs.processed';
 
 @Component({
   selector: 'app-program-detail',
@@ -12,15 +11,15 @@ import { Program, ProgramOccurrence } from '../../data/program.model';
   styleUrls: ['./program-detail.component.scss']
 })
 export class ProgramDetailComponent {
-  protected program?: Program;
+  protected readonly currentLanguage = 'hu';
+  protected program?: ProcessedProgramSeries;
 
   constructor(private readonly route: ActivatedRoute) {
     const slug = this.route.snapshot.paramMap.get('slug');
-
-    this.program = PROGRAMS.find((item) => item.slug === slug);
+    this.program = PROCESSED_PROGRAM_SERIES.find((item) => item.slug === slug);
   }
 
-  protected trackOccurrence(_: number, occurrence: ProgramOccurrence): string {
-    return occurrence.slug;
+  protected trackOccurrence(_: number, occurrence: ProcessedProgramOccurrence): string {
+    return occurrence.id;
   }
 }

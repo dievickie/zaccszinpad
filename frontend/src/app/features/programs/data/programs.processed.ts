@@ -1,24 +1,33 @@
-import { toSlug } from '../../ensemble/utils/member-slug.util';
-import { ProgramOccurrence, ProgramSeries } from './program.model';
 import { PROGRAM_OCCURRENCES } from './program-occurrences.mock';
 import { PROGRAM_SERIES } from './program-series.mock';
-
-export interface ProcessedProgramSeries extends ProgramSeries {
-  slug: string;
-}
+import { ProgramOccurrence, ProgramSeries } from './program.model';
 
 export interface ProcessedProgramOccurrence extends ProgramOccurrence {
-  slug: string;
+  seriesSlug: string;
 }
 
-export const PROCESSED_PROGRAM_SERIES: ProcessedProgramSeries[] =
-  PROGRAM_SERIES.map((series) => ({
-    ...series,
-    slug: series.slug ?? toSlug(series.title.hu)
-  }));
+export interface ProcessedProgramSeries extends ProgramSeries {
+  occurrences: ProcessedProgramOccurrence[];
+}
+
+const seriesById = new Map<string, ProgramSeries>(
+  PROGRAM_SERIES.map((series) => [series.id, series])
+);
 
 export const PROCESSED_PROGRAM_OCCURRENCES: ProcessedProgramOccurrence[] =
   PROGRAM_OCCURRENCES.map((occurrence) => ({
     ...occurrence,
-    slug: occurrence.slug ?? toSlug(occurrence.title.hu)
+    seriesSlug: seriesById.get(occurrence.seriesId)?.slug ?? occurrence.seriesId
+  }));
+
+export const PROCESSED_PROGRAM_SERIES: ProcessedProgramSeries[] =
+  PROGRAM_SERIES.map((series) => ({
+    ...series,
+    occurrences: PROCESSED_PROGRAM_OCCURRENCES.filter(
+      (occurrence) => occurrence.seriesId === series.id
+    ).sort((a, b) => {
+      const aTime = a.startDate ? new Date(a.startDate).getTime() : 0;
+      const bTime = b.startDate ? new Date(b.startDate).getTime() : 0;
+      return aTime - bTime;
+    })
   }));

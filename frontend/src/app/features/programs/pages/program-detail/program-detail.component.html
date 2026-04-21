@@ -2,13 +2,13 @@
   <section class="program-detail">
     <header class="program-detail__hero">
       <p class="program-detail__eyebrow">Program</p>
-      <h1>{{ currentProgram.title }}</h1>
+      <h1>{{ currentProgram.title[currentLanguage] }}</h1>
 
       <p
         class="program-detail__short"
         *ngIf="currentProgram.shortDescription"
       >
-        {{ currentProgram.shortDescription }}
+        {{ currentProgram.shortDescription[currentLanguage] }}
       </p>
 
       <div
@@ -16,33 +16,33 @@
         *ngIf="currentProgram.description?.length"
       >
         <p *ngFor="let paragraph of currentProgram.description">
-          {{ paragraph }}
+          {{ paragraph[currentLanguage] }}
         </p>
       </div>
     </header>
 
     <section
       class="program-contact"
-      *ngIf="currentProgram.contactBlock as contact"
+      *ngIf="currentProgram.contactBlock"
     >
-      <h2>{{ contact.title }}</h2>
+      <h2>{{ currentProgram.contactBlock.title[currentLanguage] }}</h2>
 
       <p class="program-contact__intro">
-        {{ contact.intro }}
+        {{ currentProgram.contactBlock.intro[currentLanguage] }}
       </p>
 
       <div class="program-contact__links">
         <a
           class="program-contact__link"
-          [href]="'mailto:' + contact.email"
+          [href]="'mailto:' + currentProgram.contactBlock.email"
         >
-          {{ contact.email }}
+          {{ currentProgram.contactBlock.email }}
         </a>
 
         <a
           class="program-contact__link"
-          *ngIf="contact.facebookUrl"
-          [href]="contact.facebookUrl"
+          *ngIf="currentProgram.contactBlock.facebookUrl"
+          [href]="currentProgram.contactBlock.facebookUrl"
           target="_blank"
           rel="noreferrer"
         >
@@ -52,12 +52,12 @@
 
       <div
         class="program-contact__collaborations"
-        *ngIf="contact.collaborationLinks?.length"
+        *ngIf="currentProgram.contactBlock.collaborationLinks?.length"
       >
         <h3>Kollaborációk</h3>
 
         <ul>
-          <li *ngFor="let link of contact.collaborationLinks">
+          <li *ngFor="let link of currentProgram.contactBlock.collaborationLinks">
             <a
               [href]="link.url"
               target="_blank"
@@ -80,8 +80,8 @@
         class="program-faq__item"
         *ngFor="let item of currentProgram.faq"
       >
-        <h3>{{ item.question }}</h3>
-        <p>{{ item.answer }}</p>
+        <h3>{{ item.question[currentLanguage] }}</h3>
+        <p>{{ item.answer[currentLanguage] }}</p>
       </div>
     </section>
 
@@ -99,29 +99,28 @@
           (click)="$event.preventDefault()"
         >
           <div class="occurrence-card__meta">
-            <span>{{ occurrence.city }}</span>
-            <span *ngIf="occurrence.venue">• {{ occurrence.venue }}</span>
+            <span>{{ occurrence.city[currentLanguage] }}</span>
+            <span *ngIf="occurrence.venue">• {{ occurrence.venue[currentLanguage] }}</span>
           </div>
 
-          <h3>{{ occurrence.title }}</h3>
+          <h3>{{ occurrence.title[currentLanguage] }}</h3>
 
-          <p class="occurrence-card__date">
-            {{ occurrence.dateLabel }}
-            <span *ngIf="occurrence.timeLabel"> | {{ occurrence.timeLabel }}</span>
+          <p class="occurrence-card__date" *ngIf="occurrence.startDate">
+            {{ occurrence.startDate | date: 'yyyy.MM.dd. HH:mm' }}
           </p>
 
           <p
             class="occurrence-card__teaser"
             *ngIf="occurrence.teaser"
           >
-            {{ occurrence.teaser }}
+            {{ occurrence.teaser[currentLanguage] }}
           </p>
 
           <p
             class="occurrence-card__artists"
             *ngIf="occurrence.artists?.length"
           >
-            {{ occurrence.artists!.join(', ') }}
+            {{ occurrence.artists?.join(', ') }}
           </p>
 
           <span class="occurrence-card__cta">
