@@ -20,39 +20,46 @@
     </div>
 
     <!-- Alkalmak -->
-    <section *ngIf="occurrences.length">
-      <h2 class="program-detail__section-title">
+    <section *ngIf="occurrences.length" class="program-detail__occurrences">
+    <h2 class="program-detail__section-title">
         {{ 'programs.occurrences' | translate }}
-      </h2>
+    </h2>
 
-      <div
-        class="program-detail__occurrence"
+    <div
+        class="program-detail__occurrence-card"
         *ngFor="let occurrence of occurrences"
-      >
-        <h3>
-          {{ occurrence.title[currentLanguage] }}
+    >
+        <div class="program-detail__occurrence-header">
+        <h3 class="program-detail__occurrence-title">
+            {{ occurrence.title[currentLanguage] }}
         </h3>
 
-        <p *ngIf="occurrence.startDate">
-          {{ occurrence.startDate }}
+        <p class="program-detail__occurrence-meta" *ngIf="occurrence.startDate">
+            {{ formatDate(occurrence.startDate) }}
+            <span *ngIf="occurrence.city">
+            – {{ occurrence.city[currentLanguage] }}
+            </span>
         </p>
-
-        <p *ngIf="occurrence.city">
-          {{ occurrence.city[currentLanguage] }}
-        </p>
+        </div>
 
         <!-- darabok -->
-        <ul *ngIf="occurrence.items?.length">
-          <li *ngFor="let item of occurrence.items">
+        <ul
+        class="program-detail__occurrence-items"
+        *ngIf="occurrence.items?.length"
+        >
+        <li *ngFor="let item of occurrence.items">
             {{ item.title[currentLanguage] }}
-          </li>
+        </li>
         </ul>
 
         <!-- közreműködők -->
-        <p *ngIf="occurrence.credits?.summary">
-            {{ occurrence.credits?.summary?.[currentLanguage] }}
+        <p
+        class="program-detail__occurrence-credits"
+        *ngIf="occurrence.credits?.summary"
+        >
+        {{ occurrence.credits?.summary?.[currentLanguage] }}
         </p>
-      </div>
+    </div>
     </section>
 
   </div>

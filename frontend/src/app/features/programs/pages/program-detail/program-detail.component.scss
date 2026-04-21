@@ -9,3 +9,50 @@
   padding-top: 1rem;
   border-top: 1px solid #ddd;
 }
+
+.program-detail__occurrences {
+  margin-top: 2.5rem;
+}
+
+.program-detail__section-title {
+  margin-bottom: 1rem;
+}
+
+.program-detail__occurrence-card {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+
+  border: 1px solid #e6dfd7;
+  border-radius: 1.25rem;
+  background: #faf8f5;
+}
+
+.program-detail__occurrence-header {
+  margin-bottom: 0.75rem;
+}
+
+.program-detail__occurrence-title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.program-detail__occurrence-meta {
+  margin: 0.25rem 0 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.program-detail__occurrence-items {
+  margin: 0.75rem 0;
+  padding-left: 1rem;
+}
+
+.program-detail__occurrence-items li {
+  margin-bottom: 0.25rem;
+}
+
+.program-detail__occurrence-credits {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #666;
+}

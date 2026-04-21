@@ -24,6 +24,15 @@ export class ProgramDetailComponent {
   protected program?: ProcessedProgramSeries;
   protected occurrences: ProcessedProgramOccurrence[] = [];
   protected currentLanguage: AppLanguage = 'hu';
+  protected formatDate(date: string): string {
+  const d = new Date(date);
+
+  return d.toLocaleDateString(this.currentLanguage, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
 
   constructor(
     private readonly route: ActivatedRoute,
