@@ -1,85 +1,134 @@
-<section *ngIf="program as program" class="program-detail">
-  <div class="program-detail__shell">
+<ng-container *ngIf="program as currentProgram">
+  <section class="program-detail">
+    <header class="program-detail__hero">
+      <p class="program-detail__eyebrow">Program</p>
+      <h1>{{ currentProgram.title }}</h1>
 
-    <a routerLink="/programok" class="program-detail__back">
-      {{ 'programs.back' | translate }}
-    </a>
-
-    <h1 class="program-detail__title">
-      {{ program.title[currentLanguage] }}
-    </h1>
-
-    <p *ngIf="program.shortDescription">
-      {{ program.shortDescription[currentLanguage] }}
-    </p>
-
-    <div *ngIf="program.longDescription?.length">
-      <p *ngFor="let paragraph of program.longDescription">
-        {{ paragraph[currentLanguage] }}
+      <p
+        class="program-detail__short"
+        *ngIf="currentProgram.shortDescription"
+      >
+        {{ currentProgram.shortDescription }}
       </p>
-    </div>
 
-    <section *ngIf="occurrences[0]?.faq?.length" class="program-detail__faq">
-      <h2>Gyakori kérdések</h2>
-
-      <div *ngFor="let item of occurrences[0].faq" class="program-detail__faq-item">
-        <h3>{{ item.question[currentLanguage] }}</h3>
-
-        <p *ngFor="let paragraph of item.answer[currentLanguage]">
+      <div
+        class="program-detail__description"
+        *ngIf="currentProgram.description?.length"
+      >
+        <p *ngFor="let paragraph of currentProgram.description">
           {{ paragraph }}
         </p>
       </div>
-    </section>
+    </header>
 
-    <section *ngIf="occurrences.length" class="program-detail__occurrences">
-      <h2 class="program-detail__section-title">
-        {{ 'programs.occurrences' | translate }}
-      </h2>
+    <section
+      class="program-contact"
+      *ngIf="currentProgram.contactBlock as contact"
+    >
+      <h2>{{ contact.title }}</h2>
+
+      <p class="program-contact__intro">
+        {{ contact.intro }}
+      </p>
+
+      <div class="program-contact__links">
+        <a
+          class="program-contact__link"
+          [href]="'mailto:' + contact.email"
+        >
+          {{ contact.email }}
+        </a>
+
+        <a
+          class="program-contact__link"
+          *ngIf="contact.facebookUrl"
+          [href]="contact.facebookUrl"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Facebook-oldal
+        </a>
+      </div>
 
       <div
-        class="program-detail__occurrence-card"
-        *ngFor="let occurrence of occurrences"
+        class="program-contact__collaborations"
+        *ngIf="contact.collaborationLinks?.length"
       >
-        <div class="program-detail__occurrence-header">
-          <h3 class="program-detail__occurrence-title">
-            {{ occurrence.title[currentLanguage] }}
-          </h3>
+        <h3>Kollaborációk</h3>
 
-          <p class="program-detail__occurrence-meta" *ngIf="occurrence.startDate">
-            {{ formatDate(occurrence.startDate) }}
-            <span *ngIf="occurrence.city">
-              – {{ occurrence.city[currentLanguage] }}
-            </span>
-          </p>
-        </div>
-
-        <ul
-          class="program-detail__occurrence-items"
-          *ngIf="occurrence.items?.length"
-        >
-          <li *ngFor="let item of occurrence.items">
+        <ul>
+          <li *ngFor="let link of contact.collaborationLinks">
             <a
-              *ngIf="item.performanceId && getPerformanceSlug(item.performanceId) as performanceSlug; else plainItem"
-              [routerLink]="['/eloadasok', performanceSlug]"
-              class="program-detail__occurrence-link"
+              [href]="link.url"
+              target="_blank"
+              rel="noreferrer"
             >
-              {{ item.title[currentLanguage] }}
+              {{ link.label }}
             </a>
-
-            <ng-template #plainItem>
-              <span>{{ item.title[currentLanguage] }}</span>
-            </ng-template>
           </li>
         </ul>
-
-        <p
-          class="program-detail__occurrence-credits"
-          *ngIf="occurrence.credits?.summary"
-        >
-          {{ occurrence.credits?.summary?.[currentLanguage] }}
-        </p>
       </div>
     </section>
 
-  </div>
-</section>
+    <section
+      class="program-faq"
+      *ngIf="currentProgram.faq?.length"
+    >
+      <h2>Gyakori kérdések</h2>
+
+      <div
+        class="program-faq__item"
+        *ngFor="let item of currentProgram.faq"
+      >
+        <h3>{{ item.question }}</h3>
+        <p>{{ item.answer }}</p>
+      </div>
+    </section>
+
+    <section
+      class="program-occurrences"
+      *ngIf="currentProgram.occurrences?.length"
+    >
+      <h2>Alkalmak</h2>
+
+      <div class="program-occurrences__grid">
+        <a
+          class="occurrence-card"
+          *ngFor="let occurrence of currentProgram.occurrences; trackBy: trackOccurrence"
+          href="#"
+          (click)="$event.preventDefault()"
+        >
+          <div class="occurrence-card__meta">
+            <span>{{ occurrence.city }}</span>
+            <span *ngIf="occurrence.venue">• {{ occurrence.venue }}</span>
+          </div>
+
+          <h3>{{ occurrence.title }}</h3>
+
+          <p class="occurrence-card__date">
+            {{ occurrence.dateLabel }}
+            <span *ngIf="occurrence.timeLabel"> | {{ occurrence.timeLabel }}</span>
+          </p>
+
+          <p
+            class="occurrence-card__teaser"
+            *ngIf="occurrence.teaser"
+          >
+            {{ occurrence.teaser }}
+          </p>
+
+          <p
+            class="occurrence-card__artists"
+            *ngIf="occurrence.artists?.length"
+          >
+            {{ occurrence.artists!.join(', ') }}
+          </p>
+
+          <span class="occurrence-card__cta">
+            Részletek és alkotók →
+          </span>
+        </a>
+      </div>
+    </section>
+  </section>
+</ng-container>

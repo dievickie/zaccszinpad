@@ -1,68 +1,156 @@
+:host {
+  display: block;
+}
+
 .program-detail {
-  width: min(1000px, calc(100% - 2rem));
+  width: min(1100px, calc(100% - 2rem));
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 3rem 0 5rem;
 }
 
-.program-detail__occurrence {
-  margin-top: 2rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ddd;
+.program-detail__hero {
+  margin-bottom: 2.5rem;
 }
 
-.program-detail__occurrences {
-  margin-top: 2.5rem;
+.program-detail__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.7;
 }
 
-.program-detail__section-title {
+.program-detail__hero h1 {
+  margin: 0 0 1rem;
+}
+
+.program-detail__short {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.program-detail__description p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.program-contact,
+.program-faq,
+.program-occurrences {
+  margin-top: 3rem;
+}
+
+.program-contact h2,
+.program-faq h2,
+.program-occurrences h2 {
   margin-bottom: 1rem;
 }
 
-.program-detail__occurrence-card {
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-
-  border: 1px solid #e6dfd7;
-  border-radius: 1.25rem;
-  background: #faf8f5;
+.program-contact__intro {
+  margin-bottom: 1rem;
+  line-height: 1.7;
 }
 
-.program-detail__occurrence-header {
+.program-contact__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.program-contact__link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.program-contact__collaborations h3 {
   margin-bottom: 0.75rem;
 }
 
-.program-detail__occurrence-title {
+.program-contact__collaborations ul {
   margin: 0;
-  font-size: 1.3rem;
+  padding-left: 1.2rem;
 }
 
-.program-detail__occurrence-meta {
-  margin: 0.25rem 0 0;
-  font-size: 0.95rem;
-  color: #555;
+.program-contact__collaborations li + li {
+  margin-top: 0.4rem;
 }
 
-.program-detail__occurrence-items {
-  margin: 0.75rem 0;
-  padding-left: 1rem;
+.program-faq__item + .program-faq__item {
+  margin-top: 1.5rem;
 }
 
-.program-detail__occurrence-items li {
-  margin-bottom: 0.25rem;
+.program-faq__item h3 {
+  margin: 0 0 0.4rem;
 }
 
-.program-detail__occurrence-credits {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: #666;
+.program-faq__item p {
+  margin: 0;
+  line-height: 1.7;
 }
 
-.program-detail__occurrence-link {
-  color: inherit;
+.program-occurrences__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.occurrence-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 1rem;
   text-decoration: none;
+  color: inherit;
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.occurrence-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.occurrence-card__meta {
+  font-size: 0.9rem;
+  opacity: 0.75;
+}
+
+.occurrence-card h3 {
+  margin: 0;
+}
+
+.occurrence-card__date {
+  margin: 0;
   font-weight: 600;
 }
 
-.program-detail__occurrence-link:hover {
-  text-decoration: underline;
+.occurrence-card__teaser {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.occurrence-card__artists {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.82;
+}
+
+.occurrence-card__cta {
+  margin-top: auto;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .program-detail {
+    width: min(100%, calc(100% - 1.25rem));
+    padding: 2rem 0 4rem;
+  }
 }
