@@ -56,3 +56,13 @@
   font-size: 0.9rem;
   color: #666;
 }
+
+.program-detail__occurrence-link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.program-detail__occurrence-link:hover {
+  text-decoration: underline;
+}

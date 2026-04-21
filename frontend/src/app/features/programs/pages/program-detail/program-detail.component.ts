@@ -9,6 +9,7 @@ import {
   ProcessedProgramSeries,
   ProcessedProgramOccurrence
 } from '../../data/programs.processed';
+import { PROCESSED_PERFORMANCES } from '../../../performances/data/performances.processed';
 
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
@@ -24,6 +25,9 @@ export class ProgramDetailComponent {
   protected program?: ProcessedProgramSeries;
   protected occurrences: ProcessedProgramOccurrence[] = [];
   protected currentLanguage: AppLanguage = 'hu';
+  protected getPerformanceSlug(performanceId: string): string | undefined {
+  return PROCESSED_PERFORMANCES.find((performance) => performance.id === performanceId)?.slug;
+}
   protected formatDate(date: string): string {
   const d = new Date(date);
 

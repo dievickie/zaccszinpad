@@ -44,11 +44,21 @@
 
         <!-- darabok -->
         <ul
-        class="program-detail__occurrence-items"
-        *ngIf="occurrence.items?.length"
-        >
+            class="program-detail__occurrence-items"
+            *ngIf="occurrence.items?.length"
+            >
         <li *ngFor="let item of occurrence.items">
+            <a
+            *ngIf="item.performanceId && getPerformanceSlug(item.performanceId) as performanceSlug; else plainItem"
+            [routerLink]="['/eloadasok', performanceSlug]"
+            class="program-detail__occurrence-link"
+            >
             {{ item.title[currentLanguage] }}
+            </a>
+
+            <ng-template #plainItem>
+            <span>{{ item.title[currentLanguage] }}</span>
+            </ng-template>
         </li>
         </ul>
 

@@ -87,28 +87,30 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
     isHighlighted: true,
     isPublic: true,
     items: [
-      {
-        title: {
-          hu: 'Első dráma címe',
-          en: 'Title of the first drama',
-          de: 'Titel des ersten Dramas'
+        {
+            title: {
+            hu: 'Diótörőcske',
+            en: 'Little Nutcracker',
+            de: 'Der kleine Nussknacker'
+            },
+            performanceId: 'diotorocske'
+        },
+        {
+            title: {
+            hu: 'A berekben',
+            en: 'In the Marsh',
+            de: 'Im Schilf'
+            },
+            performanceId: 'a-berekben'
+        },
+        {
+            title: {
+            hu: 'Harmadik dráma címe',
+            en: 'Title of the third drama',
+            de: 'Titel des dritten Dramas'
+            }
         }
-      },
-      {
-        title: {
-          hu: 'Második dráma címe',
-          en: 'Title of the second drama',
-          de: 'Titel des zweiten Dramas'
-        }
-      },
-      {
-        title: {
-          hu: 'Harmadik dráma címe',
-          en: 'Title of the third drama',
-          de: 'Titel des dritten Dramas'
-        }
-      }
-    ],
+        ],
     credits: {
       summary: {
         hu: 'A Zacc Színpad társulati tagjai és meghívott közreműködők.',
