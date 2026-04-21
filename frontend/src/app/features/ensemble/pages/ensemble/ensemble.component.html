@@ -1,1 +1,36 @@
-<p>ensemble works!</p>
+<section class="ensemble-page">
+  <h1>{{ 'ensemble.title' | translate }}</h1>
+
+  <div class="grid">
+    <ng-container *ngFor="let member of featuredMembers">
+      <a
+        *ngIf="member.profileType === 'full'; else staticCard"
+        [routerLink]="['/tarsulat', member.slug]"
+      >
+        <app-member-card
+          [member]="member"
+          [language]="currentLanguage"
+        ></app-member-card>
+      </a>
+
+      <ng-template #staticCard>
+        <div>
+          <app-member-card
+            [member]="member"
+            [language]="currentLanguage"
+          ></app-member-card>
+        </div>
+      </ng-template>
+    </ng-container>
+  </div>
+
+  <section *ngIf="minimalMembers.length">
+    <h2>{{ 'ensemble.additionalContributors' | translate }}</h2>
+
+    <ul>
+      <li *ngFor="let member of minimalMembers">
+        {{ member.name[currentLanguage] }} — {{ member.role[currentLanguage] }}
+      </li>
+    </ul>
+  </section>
+</section>

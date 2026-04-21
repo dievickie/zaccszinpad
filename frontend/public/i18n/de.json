@@ -1,40 +1,46 @@
 {
   "nav": {
-    "home": "Start",
+    "home": "Startseite",
     "ensemble": "Ensemble",
     "performances": "Produktionen",
     "contact": "Kontakt"
   },
   "home": {
-    "eyebrow": "Unabhängiges künstlerisches Ensemble",
-    "title": "Zacc Bühne",
-    "subtitle": "Wir entwickeln Aufführungen, gemeinschaftliche Formate und Kooperationen an den Schnittstellen von Theater und Performance. Unsere Arbeiten suchen Offenheit, Präsenz und echten Kontakt mit dem Publikum.",
-    "ctaPerformances": "Unsere Produktionen",
+    "eyebrow": "Unabhängige künstlerische Gemeinschaft",
+    "title": "Zacc Színpad",
+    "subtitle": "Wir arbeiten an den Schnittstellen von Aufführungen, gemeinschaftlichen Räumen und Kooperationen. Wir entwickeln theatrale und performative Formen, die offen und lebendig sind und den Kontakt zum Publikum suchen.",
+    "ctaPerformances": "Unsere Aufführungen",
     "ctaContact": "Kontakt",
     "intro": {
       "label": "Über uns",
-      "title": "Zeitgenössische, kollektive und bewegliche Theaterarbeit",
-      "text": "Die Zacc Bühne ist ein künstlerischer Zusammenhang, in dem Aufführungen, Workshops, offene Proben und gemeinschaftliche Präsenz einander stärken. Wichtig sind uns Flexibilität, persönliche Begegnung und Arbeiten, die in unterschiedlichen Räumen und Kontexten funktionieren."
+      "title": "Zeitgenössische, gemeinschaftliche Theaterarbeit in Bewegung",
+      "text": "Zacc Színpad ist ein künstlerisches Umfeld, in dem Aufführung, Workshop, offene Probe und gemeinschaftliche Präsenz einander stärken. Wichtig sind uns Flexibilität, persönliche Nähe und Arbeiten, die in unterschiedlichen Räumen und Situationen wirksam werden können."
     },
     "cards": {
       "performances": {
         "label": "Repertoire",
-        "title": "Produktionen und einladbare Arbeiten",
-        "text": "Wir zeigen ausgewählte Arbeiten, die in unterschiedlichen Spielorten und Kooperationen realisiert werden können.",
-        "link": "Zu den Produktionen"
+        "title": "Aufführungen und einladbare Produktionen",
+        "text": "Wir präsentieren ausgewählte Arbeiten, die an unterschiedlichen Orten und in verschiedenen Kooperationen realisiert werden können.",
+        "link": "Weiter zu den Aufführungen"
       },
       "ensemble": {
         "label": "Menschen",
-        "title": "Das Ensemble und künstlerische Profile",
-        "text": "Die Mitglieder des Teams können auch einzeln vorgestellt werden, sodass die Website zugleich als kollektive Präsenz und professionelles Portfolio funktioniert.",
-        "link": "Zum Ensemble"
+        "title": "Das Ensemble und die künstlerischen Profile",
+        "text": "Die Mitglieder des Teams können auch einzeln vorgestellt werden, sodass die Website zugleich als gemeinschaftliches und professionelles Portfolio funktioniert.",
+        "link": "Weiter zum Ensemble"
       }
     },
     "cta": {
       "label": "Kontakt",
-      "title": "Möchtest du mit uns arbeiten, uns einladen oder mehr erfahren?",
+      "title": "Möchtest du mit uns arbeiten, uns einladen oder mehr über uns erfahren?",
       "text": "Wir sind offen für Kooperationen, Einladungen und fachlichen Austausch.",
       "button": "Kontakt aufnehmen"
     }
+  },
+  "ensemble": {
+    "title": "Ensemble",
+    "backToEnsemble": "← Zurück zum Ensemble",
+    "additionalContributors": "Weitere Mitwirkende",
+    "introduction": "Vorstellung"
   }
 }

@@ -6,35 +6,41 @@
     "contact": "Contact"
   },
   "home": {
-    "eyebrow": "Independent creative ensemble",
-    "title": "Zacc Stage",
-    "subtitle": "We create performances, community-based formats and collaborations at the intersections of theatre and live art. Our work seeks openness, presence and genuine connection with audiences.",
+    "eyebrow": "Independent creative community",
+    "title": "Zacc Színpad",
+    "subtitle": "We work at the intersections of performances, community spaces and collaborations. We create theatrical and performative forms that are open, alive, and seek a connection with their audiences.",
     "ctaPerformances": "Our performances",
     "ctaContact": "Contact",
     "intro": {
       "label": "About us",
-      "title": "Contemporary, collective and evolving theatre work",
-      "text": "Zacc Stage is a creative platform where performances, workshops, open rehearsals and community presence strengthen one another. We value flexibility, personal connection and creating work that can speak across different spaces and contexts."
+      "title": "Contemporary, collective theatre work in motion",
+      "text": "Zacc Színpad is a creative environment in which performance, workshop, open rehearsal and community presence strengthen one another. Flexibility, personal connection, and creating works that can speak in different spaces and situations are important to us."
     },
     "cards": {
       "performances": {
         "label": "Repertoire",
-        "title": "Performances and bookable productions",
-        "text": "We present selected works that can be adapted to different venues and collaborative settings.",
+        "title": "Performances and productions available for invitation",
+        "text": "We present selected works that can be realised in different venues and collaborative settings.",
         "link": "Go to performances"
       },
       "ensemble": {
         "label": "People",
-        "title": "The ensemble and artist profiles",
-        "text": "The members of the group can also be presented individually, so the site works as both a collective presence and a professional portfolio.",
-        "link": "Go to ensemble"
+        "title": "The ensemble and individual creative profiles",
+        "text": "The members of the team can also be presented individually, so the site functions both as a collective and as a professional portfolio.",
+        "link": "Go to the ensemble"
       }
     },
     "cta": {
-      "label": "Get in touch",
-      "title": "Would you like to collaborate, invite us or learn more?",
-      "text": "We are open to collaborations, invitations and professional exchange.",
-      "button": "Contact us"
+      "label": "Connection",
+      "title": "Would you like to work with us, invite us, or learn more?",
+      "text": "We are open to collaborations, invitations, and professional exchange.",
+      "button": "Get in touch"
     }
+  },
+  "ensemble": {
+    "title": "Ensemble",
+    "backToEnsemble": "← Back to the ensemble",
+    "additionalContributors": "Additional contributors",
+    "introduction": "Introduction"
   }
 }

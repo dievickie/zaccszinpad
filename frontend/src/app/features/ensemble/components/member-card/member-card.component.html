@@ -1,0 +1,19 @@
+<article class="member-card">
+  <div class="member-card__image member-card__image--placeholder">
+    <img
+      *ngIf="member.imageUrl"
+      [src]="member.imageUrl"
+      [alt]="member.name[language]"
+      class="member-card__img"
+    />
+  </div>
+
+  <div class="member-card__content">
+    <h3 class="member-card__name">{{ member.name[language] }}</h3>
+    <p class="member-card__role">{{ member.role[language] }}</p>
+
+    <p class="member-card__bio" *ngIf="member.shortBio">
+      {{ member.shortBio[language] }}
+    </p>
+  </div>
+</article>

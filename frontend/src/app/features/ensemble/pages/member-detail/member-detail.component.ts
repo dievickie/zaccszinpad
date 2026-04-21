@@ -1,44 +1,50 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnDestroy } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { MemberCardComponent } from '../../components/member-card/member-card.component';
 import { PROCESSED_MEMBERS, ProcessedMember } from '../../data/members.processed';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-ensemble',
+  selector: 'app-member-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule, MemberCardComponent, TranslatePipe],
-  templateUrl: './ensemble.component.html',
-  styleUrls: ['./ensemble.component.scss']
+  imports: [CommonModule, RouterModule, TranslatePipe],
+  templateUrl: './member-detail.component.html',
+  styleUrls: ['./member-detail.component.scss']
 })
-export class EnsembleComponent implements OnDestroy {
-  protected readonly members = PROCESSED_MEMBERS;
+export class MemberDetailComponent implements OnDestroy {
+  protected member?: ProcessedMember;
   protected currentLanguage: AppLanguage = 'hu';
 
   private readonly langChangeSubscription: Subscription;
 
-  constructor(private readonly translate: TranslateService) {
+  constructor(
+    private readonly route: ActivatedRoute,
+    private readonly router: Router,
+    private readonly translate: TranslateService
+  ) {
     this.setLanguage();
 
     this.langChangeSubscription = this.translate.onLangChange.subscribe(() => {
       this.setLanguage();
     });
-  }
 
-  get featuredMembers(): ProcessedMember[] {
-    return this.members.filter(
-      (m) => m.profileType === 'full' || m.profileType === 'short'
+    const slug = this.route.snapshot.paramMap.get('slug');
+
+    const found = PROCESSED_MEMBERS.find(
+      (m) => m.profileType === 'full' && m.slug === slug
     );
-  }
 
-  get minimalMembers(): ProcessedMember[] {
-    return this.members.filter((m) => m.profileType === 'minimal');
+    if (!found) {
+      void this.router.navigate(['/tarsulat']);
+      return;
+    }
+
+    this.member = found;
   }
 
   ngOnDestroy(): void {

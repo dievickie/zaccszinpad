@@ -1,0 +1,47 @@
+<section class="member-detail" *ngIf="member as member">
+  <div class="member-detail__shell">
+    <a class="member-detail__back-link" routerLink="/tarsulat">
+      {{ 'ensemble.backToEnsemble' | translate }}
+    </a>
+
+    <header class="member-detail__header">
+      <div class="member-detail__image-wrapper">
+        <img
+          *ngIf="member.imageUrl"
+          class="member-detail__image"
+          [src]="member.imageUrl"
+          [alt]="member.name[currentLanguage]"
+        />
+
+        <div
+          *ngIf="!member.imageUrl"
+          class="member-detail__image"
+        ></div>
+      </div>
+
+      <div class="member-detail__intro">
+        <h1 class="member-detail__name">{{ member.name[currentLanguage] }}</h1>
+        <p class="member-detail__role">{{ member.role[currentLanguage] }}</p>
+
+        <p class="member-detail__short-bio" *ngIf="member.shortBio">
+          {{ member.shortBio[currentLanguage] }}
+        </p>
+      </div>
+    </header>
+
+    <div class="member-detail__content">
+      <section class="member-detail__section" *ngIf="member.longBio?.length">
+        <h2 class="member-detail__section-title">
+          {{ 'ensemble.introduction' | translate }}
+        </h2>
+
+        <p
+          class="member-detail__long-bio"
+          *ngFor="let paragraph of member.longBio"
+        >
+          {{ paragraph[currentLanguage] }}
+        </p>
+      </section>
+    </div>
+  </div>
+</section>

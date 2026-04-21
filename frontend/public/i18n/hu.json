@@ -36,5 +36,11 @@
       "text": "Nyitottak vagyunk együttműködésekre, meghívásokra és szakmai kapcsolódásokra.",
       "button": "Kapcsolatfelvétel"
     }
+  },
+  "ensemble": {
+    "title": "Társulat",
+    "backToEnsemble": "← Vissza a társulathoz",
+    "additionalContributors": "További közreműködők",
+    "introduction": "Bemutatkozás"
   }
 }
