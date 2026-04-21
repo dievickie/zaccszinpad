@@ -6,6 +6,20 @@
   padding: 5rem 0 4rem;
 }
 
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__sketch {
+  position: absolute;
+  top: -40px;
+  right: -80px;
+  width: 500px;
+  max-width: 90%;
+  pointer-events: none;
+  transform: rotate(-6deg);
+}
 .hero__content {
   max-width: 760px;
 }
@@ -144,5 +158,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+  }
+}
+
+.hero__sketch path {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: drawLine 2.2s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
   }
 }
