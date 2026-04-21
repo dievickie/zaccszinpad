@@ -41,6 +41,20 @@
         >
           {{ paragraph[currentLanguage] }}
         </p>
+        <section
+          class="member-detail__section"
+          *ngIf="relatedPerformances.length"
+        >
+          <h2 class="member-detail__section-title">
+            {{ 'member.relatedPerformances' | translate }}
+          </h2>
+
+          <ul class="member-detail__performance-list">
+            <li *ngFor="let performance of relatedPerformances">
+              {{ performance.title[currentLanguage] }}
+            </li>
+          </ul>
+        </section>
       </section>
     </div>
   </div>

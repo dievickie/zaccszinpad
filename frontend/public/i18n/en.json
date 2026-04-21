@@ -42,5 +42,8 @@
     "backToEnsemble": "← Back to the ensemble",
     "additionalContributors": "Additional contributors",
     "introduction": "Introduction"
+  },
+  "member": {
+    "relatedPerformances": "Related performances"
   }
 }

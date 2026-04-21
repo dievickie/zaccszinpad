@@ -42,5 +42,8 @@
     "backToEnsemble": "← Zurück zum Ensemble",
     "additionalContributors": "Weitere Mitwirkende",
     "introduction": "Vorstellung"
+  },
+  "member": {
+    "relatedPerformances": "Verbundene Aufführungen"
   }
 }

@@ -42,5 +42,8 @@
     "backToEnsemble": "← Vissza a társulathoz",
     "additionalContributors": "További közreműködők",
     "introduction": "Bemutatkozás"
+  },
+  "member": {
+    "relatedPerformances": "Kapcsolódó előadások"
   }
 }
