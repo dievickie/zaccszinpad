@@ -11,12 +11,11 @@ export interface ProcessedProgramOccurrence extends ProgramOccurrence {
   slug: string;
 }
 
-export const PROCESSED_PROGRAM_SERIES: ProcessedProgramSeries[] = PROGRAM_SERIES.map(
-  (series) => ({
+export const PROCESSED_PROGRAM_SERIES: ProcessedProgramSeries[] =
+  PROGRAM_SERIES.map((series) => ({
     ...series,
     slug: series.slug ?? toSlug(series.title.hu)
-  })
-);
+  }));
 
 export const PROCESSED_PROGRAM_OCCURRENCES: ProcessedProgramOccurrence[] =
   PROGRAM_OCCURRENCES.map((occurrence) => ({

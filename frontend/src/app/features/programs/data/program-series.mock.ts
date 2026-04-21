@@ -21,8 +21,7 @@ export const PROGRAM_SERIES: ProgramSeries[] = [
         de: 'Okuláré ist die wiederkehrende Lesereihe des Zacc Színpad, deren einzelne Abende jeweils um ein eigenes Leitwort organisiert sind.'
       }
     ],
-    occurrenceIds: ['okulare-elet']
-  },
+    occurrenceIds: ['okulare-februar', 'okulare-el']  },
   {
     id: 'zacc-fesztival',
     title: {

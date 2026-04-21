@@ -51,5 +51,9 @@
     "back": "← Back to performances",
     "members": "Contributors",
     "credits": "Main creators and cast"
+  },
+  "programs": {
+    "back": "← Back to programs",
+    "occurrences": "Occurrences"
   }
 }

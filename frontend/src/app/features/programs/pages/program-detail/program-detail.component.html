@@ -1,3 +1,59 @@
-<section class="program-detail">
-  <p>program detail works!</p>
+<section *ngIf="program as program" class="program-detail">
+  <div class="program-detail__shell">
+
+    <a routerLink="/programok" class="program-detail__back">
+      {{ 'programs.back' | translate }}
+    </a>
+
+    <h1 class="program-detail__title">
+      {{ program.title[currentLanguage] }}
+    </h1>
+
+    <p *ngIf="program.shortDescription">
+      {{ program.shortDescription[currentLanguage] }}
+    </p>
+
+    <div *ngIf="program.longDescription?.length">
+      <p *ngFor="let paragraph of program.longDescription">
+        {{ paragraph[currentLanguage] }}
+      </p>
+    </div>
+
+    <!-- Alkalmak -->
+    <section *ngIf="occurrences.length">
+      <h2 class="program-detail__section-title">
+        {{ 'programs.occurrences' | translate }}
+      </h2>
+
+      <div
+        class="program-detail__occurrence"
+        *ngFor="let occurrence of occurrences"
+      >
+        <h3>
+          {{ occurrence.title[currentLanguage] }}
+        </h3>
+
+        <p *ngIf="occurrence.startDate">
+          {{ occurrence.startDate }}
+        </p>
+
+        <p *ngIf="occurrence.city">
+          {{ occurrence.city[currentLanguage] }}
+        </p>
+
+        <!-- darabok -->
+        <ul *ngIf="occurrence.items?.length">
+          <li *ngFor="let item of occurrence.items">
+            {{ item.title[currentLanguage] }}
+          </li>
+        </ul>
+
+        <!-- közreműködők -->
+        <p *ngIf="occurrence.credits?.summary">
+            {{ occurrence.credits?.summary?.[currentLanguage] }}
+        </p>
+      </div>
+    </section>
+
+  </div>
 </section>
