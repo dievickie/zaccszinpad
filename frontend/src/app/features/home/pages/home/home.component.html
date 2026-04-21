@@ -42,28 +42,6 @@
   </div>
 </section>
 
-<section *ngIf="nextOccurrence as event">
-  <h2>Következő esemény</h2>
-
-  <h3>{{ event.title[currentLanguage] }}</h3>
-
-  <p *ngIf="event.startDate">
-    {{ event.startDate }}
-
-    <span *ngIf="event.startDate && (event.startDate < today)">
-      (legutóbbi)
-    </span>
-  </p>
-
-  <p *ngIf="event.city">
-    {{ event.city[currentLanguage] }}
-  </p>
-
-  <a [routerLink]="['/programok', event.seriesId]">
-    Részletek
-  </a>
-</section>
-
 <section class="intro">
   <div class="section-heading">
     <p class="section-label">{{ 'home.intro.label' | translate }}</p>
@@ -75,24 +53,35 @@
   </p>
 </section>
 
-<section class="highlights">
-  <article class="card">
-    <p class="card__label">{{ 'home.cards.performances.label' | translate }}</p>
-    <h3>{{ 'home.cards.performances.title' | translate }}</h3>
-    <p>{{ 'home.cards.performances.text' | translate }}</p>
-    <a routerLink="/eloadasok" class="text-link">
-      {{ 'home.cards.performances.link' | translate }}
-    </a>
-  </article>
+<section *ngIf="nextOccurrence as event" class="home-highlight">
+  <div class="home-highlight__inner">
 
-  <article class="card">
-    <p class="card__label">{{ 'home.cards.ensemble.label' | translate }}</p>
-    <h3>{{ 'home.cards.ensemble.title' | translate }}</h3>
-    <p>{{ 'home.cards.ensemble.text' | translate }}</p>
-    <a routerLink="/tarsulat" class="text-link">
-      {{ 'home.cards.ensemble.link' | translate }}
+    <div class="home-highlight__text">
+      <p class="home-highlight__label">
+        Következő esemény
+      </p>
+
+      <h2 class="home-highlight__title">
+        {{ event.seriesId === 'okulare' ? 'Okuláré' : '' }}
+        – {{ event.title[currentLanguage] }}
+      </h2>
+
+      <p class="home-highlight__meta" *ngIf="event.startDate">
+        {{ formatDate(event.startDate) }}
+        <span *ngIf="event.city">
+          – {{ event.city[currentLanguage] }}
+        </span>
+      </p>
+    </div>
+
+    <a
+      class="button button--primary"
+      [routerLink]="['/programok', event.seriesId]"
+    >
+      Részletek
     </a>
-  </article>
+
+  </div>
 </section>
 
 <section class="cta-banner">

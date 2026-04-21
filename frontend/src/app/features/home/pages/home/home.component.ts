@@ -22,6 +22,15 @@ export class HomeComponent implements OnDestroy {
   protected nextOccurrence?: ProcessedProgramOccurrence;
   protected currentLanguage: AppLanguage = 'hu';
   protected today = new Date().toISOString().slice(0, 10);
+  protected formatDate(date: string): string {
+    const d = new Date(date);
+
+    return d.toLocaleDateString(this.currentLanguage, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+      });
+  }
 
   private readonly langChangeSubscription: Subscription;
 
