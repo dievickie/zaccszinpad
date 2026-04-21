@@ -19,57 +19,66 @@
       </p>
     </div>
 
-    <!-- Alkalmak -->
-    <section *ngIf="occurrences.length" class="program-detail__occurrences">
-    <h2 class="program-detail__section-title">
-        {{ 'programs.occurrences' | translate }}
-    </h2>
+    <section *ngIf="occurrences[0]?.faq?.length" class="program-detail__faq">
+      <h2>Gyakori kérdések</h2>
 
-    <div
+      <div *ngFor="let item of occurrences[0].faq" class="program-detail__faq-item">
+        <h3>{{ item.question[currentLanguage] }}</h3>
+
+        <p *ngFor="let paragraph of item.answer[currentLanguage]">
+          {{ paragraph }}
+        </p>
+      </div>
+    </section>
+
+    <section *ngIf="occurrences.length" class="program-detail__occurrences">
+      <h2 class="program-detail__section-title">
+        {{ 'programs.occurrences' | translate }}
+      </h2>
+
+      <div
         class="program-detail__occurrence-card"
         *ngFor="let occurrence of occurrences"
-    >
+      >
         <div class="program-detail__occurrence-header">
-        <h3 class="program-detail__occurrence-title">
+          <h3 class="program-detail__occurrence-title">
             {{ occurrence.title[currentLanguage] }}
-        </h3>
+          </h3>
 
-        <p class="program-detail__occurrence-meta" *ngIf="occurrence.startDate">
+          <p class="program-detail__occurrence-meta" *ngIf="occurrence.startDate">
             {{ formatDate(occurrence.startDate) }}
             <span *ngIf="occurrence.city">
-            – {{ occurrence.city[currentLanguage] }}
+              – {{ occurrence.city[currentLanguage] }}
             </span>
-        </p>
+          </p>
         </div>
 
-        <!-- darabok -->
         <ul
-            class="program-detail__occurrence-items"
-            *ngIf="occurrence.items?.length"
-            >
-        <li *ngFor="let item of occurrence.items">
+          class="program-detail__occurrence-items"
+          *ngIf="occurrence.items?.length"
+        >
+          <li *ngFor="let item of occurrence.items">
             <a
-            *ngIf="item.performanceId && getPerformanceSlug(item.performanceId) as performanceSlug; else plainItem"
-            [routerLink]="['/eloadasok', performanceSlug]"
-            class="program-detail__occurrence-link"
+              *ngIf="item.performanceId && getPerformanceSlug(item.performanceId) as performanceSlug; else plainItem"
+              [routerLink]="['/eloadasok', performanceSlug]"
+              class="program-detail__occurrence-link"
             >
-            {{ item.title[currentLanguage] }}
+              {{ item.title[currentLanguage] }}
             </a>
 
             <ng-template #plainItem>
-            <span>{{ item.title[currentLanguage] }}</span>
+              <span>{{ item.title[currentLanguage] }}</span>
             </ng-template>
-        </li>
+          </li>
         </ul>
 
-        <!-- közreműködők -->
         <p
-        class="program-detail__occurrence-credits"
-        *ngIf="occurrence.credits?.summary"
+          class="program-detail__occurrence-credits"
+          *ngIf="occurrence.credits?.summary"
         >
-        {{ occurrence.credits?.summary?.[currentLanguage] }}
+          {{ occurrence.credits?.summary?.[currentLanguage] }}
         </p>
-    </div>
+      </div>
     </section>
 
   </div>

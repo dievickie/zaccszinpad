@@ -25,6 +25,19 @@ export interface ProgramOccurrenceCredits {
   note?: LocalizedText;
 }
 
+export type FaqItem = {
+  question: {
+    hu: string;
+    en: string;
+    de: string;
+  };
+  answer: {
+    hu: string[];
+    en: string[];
+    de: string[];
+  };
+};
+
 export interface ProgramOccurrence {
   id: string;
   slug?: string;
@@ -45,6 +58,7 @@ export interface ProgramOccurrence {
 
   items?: ProgramOccurrenceItem[];
   credits?: ProgramOccurrenceCredits;
+  faq?: FaqItem[];
 }
 
 export interface ProgramSeries {
