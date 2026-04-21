@@ -42,6 +42,28 @@
   </div>
 </section>
 
+<section *ngIf="nextOccurrence as event">
+  <h2>Következő esemény</h2>
+
+  <h3>{{ event.title[currentLanguage] }}</h3>
+
+  <p *ngIf="event.startDate">
+    {{ event.startDate }}
+
+    <span *ngIf="event.startDate && (event.startDate < today)">
+      (legutóbbi)
+    </span>
+  </p>
+
+  <p *ngIf="event.city">
+    {{ event.city[currentLanguage] }}
+  </p>
+
+  <a [routerLink]="['/programok', event.seriesId]">
+    Részletek
+  </a>
+</section>
+
 <section class="intro">
   <div class="section-heading">
     <p class="section-label">{{ 'home.intro.label' | translate }}</p>

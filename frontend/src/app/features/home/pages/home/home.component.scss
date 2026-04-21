@@ -149,6 +149,30 @@
   text-decoration: underline;
 }
 
+.home-highlight {
+  width: min(1000px, calc(100% - 2rem));
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.home-highlight__label {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 0.5rem;
+}
+
+.home-highlight__title {
+  margin: 0 0 0.5rem;
+}
+
+.home-highlight__meta {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 768px) {
   .highlights {
     grid-template-columns: repeat(2, minmax(0, 1fr));
