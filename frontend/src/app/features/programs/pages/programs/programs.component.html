@@ -1,0 +1,35 @@
+<section class="programs-page">
+  <h1>{{ 'nav.programs' | translate }}</h1>
+
+  <div class="programs-grid">
+    <a
+      *ngFor="let program of programs"
+      class="programs-grid__link"
+      [routerLink]="['/programok', program.slug]"
+    >
+      <article class="program-card">
+        <div class="program-card__image" *ngIf="program.imageUrl; else placeholder">
+          <img
+            [src]="program.imageUrl"
+            [alt]="program.title[currentLanguage]"
+            class="program-card__img"
+          />
+        </div>
+
+        <ng-template #placeholder>
+          <div class="program-card__image program-card__image--placeholder"></div>
+        </ng-template>
+
+        <div class="program-card__content">
+          <h2 class="program-card__title">
+            {{ program.title[currentLanguage] }}
+          </h2>
+
+          <p class="program-card__description" *ngIf="program.shortDescription">
+            {{ program.shortDescription[currentLanguage] }}
+          </p>
+        </div>
+      </article>
+    </a>
+  </div>
+</section>

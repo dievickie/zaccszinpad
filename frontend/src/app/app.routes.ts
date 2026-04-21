@@ -13,6 +13,13 @@ export const routes: Routes = [
   },
 
   {
+    path: 'programok',
+    loadChildren: () =>
+      import('./features/programs/programs.routes')
+        .then(m => m.PROGRAMS_ROUTES)
+  },
+
+  {
     path: 'eloadasok',
     loadChildren: () =>
       import('./features/performances/performances.routes')

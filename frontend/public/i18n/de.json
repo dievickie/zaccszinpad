@@ -2,7 +2,8 @@
   "nav": {
     "home": "Startseite",
     "ensemble": "Ensemble",
-    "performances": "Produktionen",
+    "performances": "Aufführungen",
+    "programs": "Programme",
     "contact": "Kontakt"
   },
   "home": {
