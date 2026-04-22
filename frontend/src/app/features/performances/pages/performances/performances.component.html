@@ -32,11 +32,11 @@
             {{ performance.shortDescription[currentLanguage] }}
         </p>
         <p
-        class="performance-card__credit"
-        *ngIf="performance.creditGroups?.length"
+          class="performance-card__credit"
+          *ngIf="performance.creditGroups?.length"
         >
-        {{ performance.creditGroups?.[0]?.label?.[currentLanguage] }}:
-        {{ performance.creditGroups?.[0]?.names?.[0] }}
+          {{ performance.creditGroups?.[0]?.label?.[currentLanguage] }}:
+          {{ performance.creditGroups?.[0]?.names?.[0]?.name }}
         </p>
         </div>
       </article>

@@ -9,6 +9,6 @@ export interface ProcessedPerformance extends Performance {
 export const PROCESSED_PERFORMANCES: ProcessedPerformance[] = PERFORMANCES.map(
   (performance) => ({
     ...performance,
-    slug: performance.slug ?? toSlug(performance.title.hu)
+    slug: performance.slug ?? toSlug(performance.title['hu'])
   })
 );

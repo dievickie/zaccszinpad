@@ -2,6 +2,11 @@ export type LocalizedText = {
   [key: string]: string;
 };
 
+export interface ProgramArtist {
+  name: string;
+  memberSlug?: string;
+}
+
 export interface ProgramLink {
   label: string;
   url: string;
@@ -42,7 +47,7 @@ export interface ProgramOccurrence {
   timeLabel?: LocalizedText;
   teaser?: LocalizedText;
   description?: LocalizedText[];
-  artists?: string[];
+  artists?: ProgramArtist[];
   isHighlighted?: boolean;
   isPublic?: boolean;
 }

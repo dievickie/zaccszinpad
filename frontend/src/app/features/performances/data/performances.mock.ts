@@ -27,7 +27,10 @@ export const PERFORMANCES: Performance[] = [
           en: 'Direction',
           de: 'Regie'
         },
-        names: ['Név']
+        names: [
+          { name: 'Név' }
+        ],
+        separator: ', '
       },
       {
         label: {
@@ -35,7 +38,11 @@ export const PERFORMANCES: Performance[] = [
           en: 'Cormorants',
           de: 'Kormorane'
         },
-        names: ['Név', 'Név']
+        names: [
+          { name: 'Viktória Cseter', memberSlug: 'cseter-viktoria' },
+          { name: 'Gabriella Keresztes', memberSlug: 'keresztes-gabriella' }
+        ],
+        separator: ', '
       },
       {
         label: {
@@ -43,7 +50,11 @@ export const PERFORMANCES: Performance[] = [
           en: 'Bittern',
           de: 'Rohrdommel'
         },
-        names: ['Név1 / Név2']
+        names: [
+          { name: 'Viktória Cseter', memberSlug: 'cseter-viktoria' },
+          { name: 'Rózsa' }
+        ],
+        separator: ' / '
       }
     ],
     creditsNote: {
@@ -78,7 +89,10 @@ export const PERFORMANCES: Performance[] = [
           en: 'Direction',
           de: 'Regie'
         },
-        names: ['Név']
+        names: [
+          { name: 'Név' }
+        ],
+        separator: ', '
       },
       {
         label: {
@@ -86,7 +100,11 @@ export const PERFORMANCES: Performance[] = [
           en: 'Cast',
           de: 'Besetzung'
         },
-        names: ['Név', 'Név']
+        names: [
+          { name: 'Név' },
+          { name: 'Név' }
+        ],
+        separator: ', '
       }
     ],
     creditsNote: {
@@ -121,7 +139,10 @@ export const PERFORMANCES: Performance[] = [
           en: 'Music',
           de: 'Musik'
         },
-        names: ['Név']
+        names: [
+          { name: 'Név' }
+        ],
+        separator: ', '
       },
       {
         label: {
@@ -129,7 +150,11 @@ export const PERFORMANCES: Performance[] = [
           en: 'Technical support',
           de: 'Technik'
         },
-        names: ['Név', 'Név']
+        names: [
+          { name: 'Név' },
+          { name: 'Név' }
+        ],
+        separator: ', '
       }
     ]
   }

@@ -1,8 +1,16 @@
-import { LocalizedText } from '../../ensemble/data/member.model';
+export type LocalizedText = {
+  [key: string]: string;
+};
+
+export interface PerformanceCreditName {
+  name: string;
+  memberSlug?: string;
+}
 
 export interface PerformanceCreditGroup {
   label: LocalizedText;
-  names: string[];
+  names: PerformanceCreditName[];
+  separator?: string;
 }
 
 export interface Performance {

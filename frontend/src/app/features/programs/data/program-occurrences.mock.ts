@@ -44,10 +44,10 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
       }
     ],
     artists: [
-      'Résztvevő művész 1',
-      'Résztvevő művész 2',
-      'Résztvevő művész 3',
-      'Berlini rendező 1'
+      { name: 'Viktória Cseter', memberSlug: 'cseter-viktoria' },
+      { name: 'Gabriella Keresztes' },
+      { name: 'Rózsa', memberSlug: 'resztvevo-muvesz-3' },
+      { name: 'Berlini rendező 1' }
     ],
     isHighlighted: true,
     isPublic: true
@@ -95,10 +95,10 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
       }
     ],
     artists: [
-      'Résztvevő művész A',
-      'Résztvevő művész B',
-      'Résztvevő művész C',
-      'Berlini rendező 2'
+      { name: 'Résztvevő művész A', memberSlug: 'resztvevo-muvesz-a' },
+      { name: 'Résztvevő művész B' },
+      { name: 'Résztvevő művész C', memberSlug: 'resztvevo-muvesz-c' },
+      { name: 'Berlini rendező 2' }
     ],
     isHighlighted: false,
     isPublic: true

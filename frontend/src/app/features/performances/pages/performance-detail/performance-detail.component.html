@@ -34,7 +34,21 @@
           </span>
 
           <span class="performance-detail__credit-names">
-            {{ group.names.join(', ') }}
+            <ng-container *ngFor="let person of group.names; let last = last">
+              <a
+                *ngIf="person.memberSlug; else plainName"
+                [routerLink]="['/tarsulat', person.memberSlug]"
+                class="performance-detail__credit-link"
+              >
+                {{ person.name }}
+              </a>
+
+              <ng-template #plainName>
+                <span>{{ person.name }}</span>
+              </ng-template>
+                <!-- fallback to name if memberSlug is missing, but still render as link if memberSlug exists -->
+              <span *ngIf="!last">{{ group.separator || ', ' }}</span>
+            </ng-container>
           </span>
         </div>
       </div>
