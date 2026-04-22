@@ -1,12 +1,16 @@
 <ng-container *ngIf="program as currentProgram">
   <section class="program-detail">
+
+    <!-- BACK -->
     <nav class="program-detail__back">
       <a routerLink="/programok">
         {{ 'programs.back' | translate }}
       </a>
     </nav>
+
+    <!-- HERO -->
     <header class="program-detail__hero">
-      <p></p>
+      <p class="program-detail__eyebrow">Program</p>
       <h1>{{ currentProgram.title[currentLanguage] }}</h1>
 
       <p
@@ -26,6 +30,7 @@
       </div>
     </header>
 
+    <!-- CONTACT -->
     <section
       class="program-contact"
       *ngIf="currentProgram.contactBlock"
@@ -49,9 +54,8 @@
           *ngIf="currentProgram.contactBlock.facebookUrl"
           [href]="currentProgram.contactBlock.facebookUrl"
           target="_blank"
-          rel="noreferrer"
         >
-          Facebook-oldal
+          Facebook
         </a>
       </div>
 
@@ -59,15 +63,11 @@
         class="program-contact__collaborations"
         *ngIf="currentProgram.contactBlock.collaborationLinks?.length"
       >
-        <h3>Kollaborációk</h3>
+        <h3>{{ 'programs.collaborations' | translate }}</h3>
 
         <ul>
           <li *ngFor="let link of currentProgram.contactBlock.collaborationLinks">
-            <a
-              [href]="link.url"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a [href]="link.url" target="_blank">
               {{ link.label }}
             </a>
           </li>
@@ -75,11 +75,12 @@
       </div>
     </section>
 
+    <!-- FAQ -->
     <section
       class="program-faq"
       *ngIf="currentProgram.faq?.length"
     >
-      <h2>Gyakori kérdések</h2>
+      <h2>{{ 'programs.faq' | translate }}</h2>
 
       <div
         class="program-faq__item"
@@ -90,9 +91,10 @@
       </div>
     </section>
 
+    <!-- OCCURRENCES -->
     <section
       class="program-occurrences"
-      *ngIf="currentProgram.occurrences.length"
+      *ngIf="currentProgram.occurrences?.length"
     >
       <h2>{{ 'programs.occurrences' | translate }}</h2>
 
@@ -105,7 +107,6 @@
         >
           <div class="occurrence-card__meta">
             <span>{{ occurrence.city[currentLanguage] }}</span>
-            <span *ngIf="occurrence.venue">• {{ occurrence.venue[currentLanguage] }}</span>
           </div>
 
           <h3>{{ occurrence.title[currentLanguage] }}</h3>
@@ -114,25 +115,20 @@
             {{ occurrence.startDate | date: 'yyyy.MM.dd. HH:mm' }}
           </p>
 
-          <p
-            class="occurrence-card__teaser"
-            *ngIf="occurrence.teaser"
-          >
+          <p *ngIf="occurrence.teaser">
             {{ occurrence.teaser[currentLanguage] }}
           </p>
 
-          <p
-            class="occurrence-card__artists"
-            *ngIf="occurrence.artists?.length"
-          >
+          <p *ngIf="occurrence.artists?.length">
             {{ occurrence.artists?.join(', ') }}
           </p>
 
           <span class="occurrence-card__cta">
-            Részletek és alkotók →
+            →
           </span>
         </a>
       </div>
     </section>
+
   </section>
 </ng-container>

@@ -54,6 +54,8 @@
   },
   "programs": {
     "back": "← Vissza a programokhoz",
-    "occurrences": "Alkalmak"
+    "occurrences": "Alkalmak",
+    "faq": "Gyakori kérdések",
+    "collaborations": "Kollaborációk"
   }
 }
