@@ -42,6 +42,29 @@
           {{ paragraph[currentLanguage] }}
         </p>
       </section>
+
+      <section
+        class="member-detail__section"
+        *ngIf="relatedPerformances.length"
+      >
+        <h2 class="member-detail__section-title">
+          {{ 'nav.performances' | translate }}
+        </h2>
+
+        <div class="member-detail__related-performances">
+          <a
+            *ngFor="let performance of relatedPerformances"
+            class="member-detail__related-performance-link"
+            [routerLink]="['/eloadasok', performance.slug]"
+          >
+            <strong>{{ performance.title[currentLanguage] }}</strong>
+
+            <span *ngIf="performance.shortDescription">
+              {{ performance.shortDescription[currentLanguage] }}
+            </span>
+          </a>
+        </div>
+      </section>
     </div>
   </div>
 </section>

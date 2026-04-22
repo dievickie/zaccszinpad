@@ -7,6 +7,10 @@ import { Subscription } from 'rxjs';
 import { PROCESSED_MEMBERS, ProcessedMember } from '../../data/members.processed';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
+import {
+  PROCESSED_PERFORMANCES,
+  ProcessedPerformance
+} from '../../../performances/data/performances.processed';
 
 @Component({
   selector: 'app-member-detail',
@@ -17,6 +21,7 @@ import { AppLanguage } from '../../../../core/i18n/i18n.types';
 })
 export class MemberDetailComponent implements OnDestroy {
   protected member?: ProcessedMember;
+  protected relatedPerformances: ProcessedPerformance[] = [];
   protected currentLanguage: AppLanguage = 'hu';
 
   private readonly langChangeSubscription: Subscription;
@@ -44,6 +49,12 @@ export class MemberDetailComponent implements OnDestroy {
     }
 
     this.member = found;
+
+    this.relatedPerformances = PROCESSED_PERFORMANCES.filter((performance) =>
+      performance.creditGroups?.some((group) =>
+        group.names?.some((person) => person.memberSlug === found.slug)
+      )
+    );
   }
 
   ngOnDestroy(): void {
