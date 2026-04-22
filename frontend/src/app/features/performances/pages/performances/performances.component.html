@@ -24,20 +24,13 @@
         </ng-template>
 
         <div class="performance-card__content">
-        <h2 class="performance-card__title">
+          <h2 class="performance-card__title">
             {{ performance.title[currentLanguage] }}
-        </h2>
+          </h2>
 
-        <p *ngIf="performance.shortDescription">
+          <p *ngIf="performance.shortDescription">
             {{ performance.shortDescription[currentLanguage] }}
-        </p>
-        <p
-          class="performance-card__credit"
-          *ngIf="performance.creditGroups?.length"
-        >
-          {{ performance.creditGroups?.[0]?.label?.[currentLanguage] }}:
-          {{ performance.creditGroups?.[0]?.names?.[0]?.name }}
-        </p>
+          </p>
         </div>
       </article>
     </a>

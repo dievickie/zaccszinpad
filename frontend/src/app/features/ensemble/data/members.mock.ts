@@ -2,6 +2,7 @@ import { Member } from './member.model';
 
 export const MEMBERS: Member[] = [
   {
+    slug: 'cseter-viktoria',
     name: {
       hu: 'Cseter Viktória',
       en: 'Viktória Cseter',
@@ -33,6 +34,7 @@ export const MEMBERS: Member[] = [
     category: 'core'
   },
   {
+    slug: 'nagy-anna',
     name: {
       hu: 'Nagy Anna',
       en: 'Anna Nagy',
@@ -59,6 +61,7 @@ export const MEMBERS: Member[] = [
     category: 'core'
   },
   {
+    slug: 'kiss-peter',
     name: {
       hu: 'Kiss Péter',
       en: 'Péter Kiss',
@@ -78,6 +81,7 @@ export const MEMBERS: Member[] = [
     category: 'core'
   },
   {
+    slug: 'toth-julia',
     name: {
       hu: 'Tóth Júlia',
       en: 'Júlia Tóth',

@@ -122,27 +122,6 @@
             {{ occurrence.teaser[currentLanguage] }}
           </p>
 
-          <p
-            class="occurrence-card__artists"
-            *ngIf="occurrence.artists?.length"
-          >
-            <ng-container *ngFor="let artist of occurrence.artists; let last = last">
-              <a
-                *ngIf="artist.memberSlug; else plainArtistName"
-                [routerLink]="['/tarsulat', artist.memberSlug]"
-                class="occurrence-card__artist-link"
-              >
-                {{ artist.name }}
-              </a>
-
-              <ng-template #plainArtistName>
-                <span>{{ artist.name }}</span>
-              </ng-template>
-
-              <span *ngIf="!last">, </span>
-            </ng-container>
-          </p>
-
           <span class="occurrence-card__cta">
             →
           </span>
