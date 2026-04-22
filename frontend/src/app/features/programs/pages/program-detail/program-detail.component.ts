@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ProcessedProgramOccurrence, ProcessedProgramSeries, PROCESSED_PROGRAM_SERIES } from '../../data/programs.processed';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-program-detail',
   standalone: true,
-  imports: [CommonModule, RouterModule],
+  imports: [CommonModule, RouterModule, TranslatePipe],
   templateUrl: './program-detail.component.html',
   styleUrls: ['./program-detail.component.scss']
 })

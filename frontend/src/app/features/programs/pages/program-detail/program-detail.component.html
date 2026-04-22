@@ -1,7 +1,12 @@
 <ng-container *ngIf="program as currentProgram">
   <section class="program-detail">
+    <nav class="program-detail__back">
+      <a routerLink="/programok">
+        {{ 'programs.back' | translate }}
+      </a>
+    </nav>
     <header class="program-detail__hero">
-      <p class="program-detail__eyebrow">Program</p>
+      <p></p>
       <h1>{{ currentProgram.title[currentLanguage] }}</h1>
 
       <p
@@ -87,9 +92,9 @@
 
     <section
       class="program-occurrences"
-      *ngIf="currentProgram.occurrences?.length"
+      *ngIf="currentProgram.occurrences.length"
     >
-      <h2>Alkalmak</h2>
+      <h2>{{ 'programs.occurrences' | translate }}</h2>
 
       <div class="program-occurrences__grid">
         <a
