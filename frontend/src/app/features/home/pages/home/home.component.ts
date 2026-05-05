@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { PROCESSED_PROGRAM_OCCURRENCES } from '../../../programs/data/programs.processed';
@@ -14,7 +14,11 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, TranslatePipe, RouterLink],
+  imports: [
+    CommonModule,
+    RouterModule,
+    TranslatePipe
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
@@ -22,15 +26,6 @@ export class HomeComponent implements OnDestroy {
   protected nextOccurrence?: ProcessedProgramOccurrence;
   protected currentLanguage: AppLanguage = 'hu';
   protected today = new Date().toISOString().slice(0, 10);
-  protected formatDate(date: string): string {
-    const d = new Date(date);
-
-    return d.toLocaleDateString(this.currentLanguage, {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-      });
-  }
 
   private readonly langChangeSubscription: Subscription;
 
@@ -44,6 +39,16 @@ export class HomeComponent implements OnDestroy {
     this.nextOccurrence = getHighlightedOccurrence(
       PROCESSED_PROGRAM_OCCURRENCES
     );
+  }
+
+  protected formatDate(date: string): string {
+    const d = new Date(date);
+
+    return d.toLocaleDateString(this.currentLanguage, {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
   }
 
   ngOnDestroy(): void {

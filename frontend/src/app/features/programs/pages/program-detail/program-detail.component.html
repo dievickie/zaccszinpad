@@ -101,8 +101,9 @@
         <a
           class="occurrence-card"
           *ngFor="let occurrence of currentProgram.occurrences; trackBy: trackOccurrence"
-          href="#"
-          (click)="$event.preventDefault()"
+          [attr.href]="occurrence.externalUrl || null"
+          [attr.target]="occurrence.externalUrl ? '_blank' : null"
+          [attr.rel]="occurrence.externalUrl ? 'noreferrer' : null"
         >
           <div class="occurrence-card__meta">
             <span>{{ occurrence.city[currentLanguage] }}</span>
@@ -123,7 +124,7 @@
           </p>
 
           <span class="occurrence-card__cta">
-            →
+            {{ 'programs.facebookEvent' | translate }}
           </span>
         </a>
       </div>

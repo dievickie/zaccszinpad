@@ -1,97 +1,57 @@
-<section class="hero">
-  <svg
-    class="hero__sketch"
-    viewBox="0 0 600 300"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M10 200 C 150 100, 300 300, 580 150"
-      stroke="#6f4e37"
-      stroke-width="2.2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      opacity="0.35"
-    />
-
-    <path
-      d="M30 220 C 200 120, 350 320, 570 170"
-      stroke="#6f4e37"
-      stroke-width="1.6"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      opacity="0.25"
-    />
-  </svg>
-
-  <div class="hero__content">
-    <p class="hero__eyebrow">{{ 'home.eyebrow' | translate }}</p>
+<div class="home-content">
+  <section class="hero-minimal">
     <h1>{{ 'home.title' | translate }}</h1>
-    <p class="hero__lead">
-      {{ 'home.subtitle' | translate }}
+  </section>
+
+  <section class="intro">
+    <div class="section-heading">
+      <p class="section-label">{{ 'home.intro.label' | translate }}</p>
+      <h2>{{ 'home.intro.title' | translate }}</h2>
+    </div>
+
+    <p class="intro__text">
+      {{ 'home.intro.text' | translate }}
     </p>
+  </section>
 
-    <div class="hero__actions">
-      <a routerLink="/eloadasok" class="button button--primary">
-        {{ 'home.ctaPerformances' | translate }}
-      </a>
-      <a routerLink="/kapcsolat" class="button button--secondary">
-        {{ 'home.ctaContact' | translate }}
+  <section *ngIf="nextOccurrence as event" class="home-highlight">
+    <div class="home-highlight__inner">
+      <div class="home-highlight__text">
+        <p class="home-highlight__label">
+          Következő esemény
+        </p>
+
+        <h2 class="home-highlight__title">
+          {{ event.seriesId === 'okulare' ? 'Okuláré' : '' }}
+          – {{ event.title[currentLanguage] }}
+        </h2>
+
+        <p class="home-highlight__meta" *ngIf="event.startDate">
+          {{ formatDate(event.startDate) }}
+          <span *ngIf="event.city">
+            – {{ event.city[currentLanguage] }}
+          </span>
+        </p>
+      </div>
+
+      <a
+        class="button button--primary"
+        [routerLink]="['/programok', event.seriesId]"
+      >
+        Részletek
       </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="intro">
-  <div class="section-heading">
-    <p class="section-label">{{ 'home.intro.label' | translate }}</p>
-    <h2>{{ 'home.intro.title' | translate }}</h2>
-  </div>
-
-  <p class="intro__text">
-    {{ 'home.intro.text' | translate }}
-  </p>
-</section>
-
-<section *ngIf="nextOccurrence as event" class="home-highlight">
-  <div class="home-highlight__inner">
-
-    <div class="home-highlight__text">
-      <p class="home-highlight__label">
-        Következő esemény
-      </p>
-
-      <h2 class="home-highlight__title">
-        {{ event.seriesId === 'okulare' ? 'Okuláré' : '' }}
-        – {{ event.title[currentLanguage] }}
-      </h2>
-
-      <p class="home-highlight__meta" *ngIf="event.startDate">
-        {{ formatDate(event.startDate) }}
-        <span *ngIf="event.city">
-          – {{ event.city[currentLanguage] }}
-        </span>
-      </p>
+  <section class="cta-banner">
+    <div>
+      <p class="section-label">{{ 'home.cta.label' | translate }}</p>
+      <h2>{{ 'home.cta.title' | translate }}</h2>
+      <p>{{ 'home.cta.text' | translate }}</p>
     </div>
 
-    <a
-      class="button button--primary"
-      [routerLink]="['/programok', event.seriesId]"
-    >
-      Részletek
+    <a routerLink="/kapcsolat" class="button button--primary">
+      {{ 'home.cta.button' | translate }}
     </a>
-
-  </div>
-</section>
-
-<section class="cta-banner">
-  <div>
-    <p class="section-label">{{ 'home.cta.label' | translate }}</p>
-    <h2>{{ 'home.cta.title' | translate }}</h2>
-    <p>{{ 'home.cta.text' | translate }}</p>
-  </div>
-
-  <a routerLink="/kapcsolat" class="button button--primary">
-    {{ 'home.cta.button' | translate }}
-  </a>
-</section>
+  </section>
+</div>

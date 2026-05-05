@@ -48,6 +48,7 @@ export interface ProgramOccurrence {
   teaser?: LocalizedText;
   description?: LocalizedText[];
   artists?: ProgramArtist[];
+  externalUrl?: string;
   isHighlighted?: boolean;
   isPublic?: boolean;
 }

@@ -43,17 +43,12 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
         de: 'Höre drei brandneue Texte und stimme für deinen Favoriten ab.'
       }
     ],
-    artists: [
-      { name: 'Viktória Cseter', memberSlug: 'cseter-viktoria' },
-      { name: 'Gabriella Keresztes' },
-      { name: 'Rózsa', memberSlug: 'resztvevo-muvesz-3' },
-      { name: 'Berlini rendező 1' }
-    ],
+    externalUrl: 'https://fb.me/e/5Ph9eq2lf',
     isHighlighted: true,
     isPublic: true
   },
   {
-    id: 'okulare-masodik-berlin',
+    id: 'okulare-masodik-alkalom-berlin',
     seriesId: 'okulare',
     slug: 'masodik-alkalom-berlin',
     title: {
@@ -94,12 +89,7 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
         de: 'In den Details findest du die beteiligten Künstler:innen und Informationen zum jeweiligen Abend.'
       }
     ],
-    artists: [
-      { name: 'Résztvevő művész A', memberSlug: 'resztvevo-muvesz-a' },
-      { name: 'Résztvevő művész B' },
-      { name: 'Résztvevő művész C', memberSlug: 'resztvevo-muvesz-c' },
-      { name: 'Berlini rendező 2' }
-    ],
+    externalUrl: 'https://fb.me/e/8Twmpey3g',
     isHighlighted: false,
     isPublic: true
   }
