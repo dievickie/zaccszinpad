@@ -1,10 +1,10 @@
 {
   "nav": {
-    "home": "Startseite",
-    "ensemble": "Ensemble",
-    "performances": "Aufführungen",
-    "programs": "Programme",
-    "contact": "Kontakt"
+    "opening": "start",
+    "ensemble": "ensemble",
+    "performances": "aufführungen",
+    "programs": "programme",
+    "contact": "kontakt"
   },
   "home": {
     "eyebrow": "Unabhängige künstlerische Gemeinschaft",

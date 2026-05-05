@@ -1,17 +1,17 @@
 {
   "nav": {
-    "home": "Kezdőlap",
-    "ensemble": "Társulat",
-    "performances": "Előadások",
-    "programs": "Programok",
-    "contact": "Kapcsolat"
+    "opening": "nyitány",
+    "ensemble": "társulat",
+    "performances": "előadások",
+    "programs": "események",
+    "contact": "kontakt"
   },
   "home": {
     "eyebrow": "Független alkotói közösség",
     "title": "Zacc Színpad",
     "subtitle": "Előadások, közösségi terek és együttműködések határterületein dolgozunk. Olyan színházi és performatív formákat hozunk létre, amelyek nyitottak, élők és kapcsolatot keresnek a nézőkkel.",
     "ctaPerformances": "Előadásaink",
-    "ctaContact": "Kapcsolat",
+    "ctaContact": "Kontakt",
     "intro": {
       "label": "Rólunk",
       "title": "Kortárs, közösségi, mozgásban lévő színházi munka",
@@ -53,7 +53,7 @@
     "credits": "Főbb alkotók és szereplők"
   },
   "programs": {
-    "back": "← Vissza a programokhoz",
+    "back": "← Vissza az eseményekhez",
     "occurrences": "Alkalmak",
     "faq": "Gyakori kérdések",
     "collaborations": "Kollaborációk",

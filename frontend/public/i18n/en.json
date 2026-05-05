@@ -1,10 +1,10 @@
 {
   "nav": {
-    "home": "Home",
-    "ensemble": "Ensemble",
-    "performances": "Performances",
-    "programs": "Programs",
-    "contact": "Contact"
+    "opening": "stage",
+    "ensemble": "ensemble",
+    "performances": "performances",
+    "programs": "events",
+    "contact": "contact"
   },
   "home": {
     "eyebrow": "Independent creative community",
@@ -53,7 +53,7 @@
     "credits": "Main creators and cast"
   },
   "programs": {
-    "back": "← Back to programs",
+    "back": "← Back to events",
     "occurrences": "Occurrences"
   }
 }
