@@ -57,13 +57,14 @@
 .site-header::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   bottom: -20px;
 
-  width: 140%;
+  width: auto;
   height: 48px;
 
-  transform: translateX(-50%);
+  transform: none;
 
   background:
     radial-gradient(
