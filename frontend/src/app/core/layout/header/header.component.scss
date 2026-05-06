@@ -121,8 +121,7 @@
 }
 
 .brand__logo {
-  height: 42px;
-  width: auto;
+  width: clamp(160px, 18vw, 260px);
   display: block;
 }
 
