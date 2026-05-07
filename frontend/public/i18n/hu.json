@@ -8,15 +8,10 @@
   },
   "home": {
     "eyebrow": "Független alkotói közösség",
-    "title": "Zacc Színpad",
+    "title": "közönség nélkül nincs színház",
     "subtitle": "Előadások, közösségi terek és együttműködések határterületein dolgozunk. Olyan színházi és performatív formákat hozunk létre, amelyek nyitottak, élők és kapcsolatot keresnek a nézőkkel.",
     "ctaPerformances": "Előadásaink",
     "ctaContact": "Kontakt",
-    "intro": {
-      "label": "Rólunk",
-      "title": "Kortárs, közösségi, mozgásban lévő színházi munka",
-      "text": "A Zacc Színpad olyan alkotói közeg, amelyben az előadás, a workshop, a nyílt próba és a közösségi jelenlét egymást erősítve jelenik meg. Fontos számunkra a rugalmasság, a személyesség és az, hogy különböző terekben és helyzetekben is megszólaló munkákat hozzunk létre."
-    },
     "cards": {
       "performances": {
         "label": "Repertoár",
@@ -39,7 +34,7 @@
     }
   },
   "ensemble": {
-    "title": "Társulat",
+    "title": "közösség nélkül nincs dráma",
     "backToEnsemble": "← Vissza a társulathoz",
     "additionalContributors": "További közreműködők",
     "introduction": "Bemutatkozás"

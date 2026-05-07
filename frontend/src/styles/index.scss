@@ -3,25 +3,26 @@
 @forward './base';
 
 :root {
-  --zacc-primary: #b91c8d;
-  --zacc-cream: #e8e5db;
-
-  --zacc-velvet-900: #070306;
-  --zacc-velvet-800: #140a13;
-  --zacc-velvet-700: #1a0b17;
-  --zacc-velvet-600: #2a0f25;
-
-  --zacc-light: #fff7e8;
-  --zacc-glow: #f472d0;
-
-  --zacc-text-light: #f7f0f5;
-  --zacc-text-muted: rgba(247, 240, 245, 0.72);
-  --zacc-text-dark: #140a13;
-
-  --zacc-radius-lg: 1.25rem;
-  --zacc-radius-xl: 1.75rem;
-
-  --zacc-transition: 220ms ease;
+    --zacc-primary: #b91c8d;
+    --zacc-cream: #e8e5db;
+    
+    --zacc-velvet-900: #070306;
+    --zacc-velvet-800: #140a13;
+    --zacc-velvet-700: #1a0b17;
+    --zacc-velvet-600: #2a0f25;
+    
+    --zacc-light: #fff7e8;
+    --zacc-glow: #f472d0;
+    
+    --zacc-text-light: #f7f0f5;
+    --zacc-text-muted: rgba(247, 240, 245, 0.72);
+    --zacc-text-dark: #140a13;
+    
+    --zacc-radius-lg: 1.25rem;
+    --zacc-radius-xl: 1.75rem;
+    
+    --zacc-transition: 220ms ease;
+    --color-text-primary: #e7e4da;
 }
 
 html {

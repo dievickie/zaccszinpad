@@ -6,7 +6,7 @@ export const PROGRAM_OCCURRENCES: ProgramOccurrence[] = [
     seriesId: 'okulare',
     slug: 'el-berlin',
     title: {
-      hu: 'ÉL – felolvasószínházi est',
+      hu: 'ÉL – kortárs felolvasószínházi est',
       en: 'LIVE – staged reading evening',
       de: 'LEBEN – szenische Lesung'
     },

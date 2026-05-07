@@ -8,15 +8,10 @@
   },
   "home": {
     "eyebrow": "Unabhängige künstlerische Gemeinschaft",
-    "title": "Zacc Színpad",
+    "title": "die Bühne braucht ihr Publikum",
     "subtitle": "Wir arbeiten an den Schnittstellen von Aufführungen, gemeinschaftlichen Räumen und Kooperationen. Wir entwickeln theatrale und performative Formen, die offen und lebendig sind und den Kontakt zum Publikum suchen.",
     "ctaPerformances": "Unsere Aufführungen",
     "ctaContact": "Kontakt",
-    "intro": {
-      "label": "Über uns",
-      "title": "Zeitgenössische, gemeinschaftliche Theaterarbeit in Bewegung",
-      "text": "Zacc Színpad ist ein künstlerisches Umfeld, in dem Aufführung, Workshop, offene Probe und gemeinschaftliche Präsenz einander stärken. Wichtig sind uns Flexibilität, persönliche Nähe und Arbeiten, die in unterschiedlichen Räumen und Situationen wirksam werden können."
-    },
     "cards": {
       "performances": {
         "label": "Repertoire",
@@ -39,7 +34,7 @@
     }
   },
   "ensemble": {
-    "title": "Ensemble",
+    "title": "drama braucht gemeinschaft",
     "backToEnsemble": "← Zurück zum Ensemble",
     "additionalContributors": "Weitere Mitwirkende",
     "introduction": "Vorstellung"
