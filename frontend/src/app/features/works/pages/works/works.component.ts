@@ -4,19 +4,19 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { PROCESSED_PERFORMANCES } from '../../data/performances.processed';
+import { PROCESSED_works } from '../../data/works.processed';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 
 @Component({
-  selector: 'app-performances',
+  selector: 'app-works',
   standalone: true,
   imports: [CommonModule, RouterModule, TranslateModule],
-  templateUrl: './performances.component.html',
-  styleUrls: ['./performances.component.scss']
+  templateUrl: './works.component.html',
+  styleUrls: ['./works.component.scss']
 })
-export class PerformancesComponent implements OnDestroy {
-  protected readonly performances = PROCESSED_PERFORMANCES;
+export class WorksComponent implements OnDestroy {
+  protected readonly works = PROCESSED_works;
   protected currentLanguage: AppLanguage = 'hu';
 
   private readonly langChangeSubscription: Subscription;

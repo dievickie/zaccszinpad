@@ -2,7 +2,7 @@
   "nav": {
     "opening": "start",
     "ensemble": "ensemble",
-    "performances": "aufführungen",
+    "works": "werke",
     "programs": "programme",
     "contact": "kontakt"
   },
@@ -13,11 +13,11 @@
     "ctaPerformances": "Unsere Aufführungen",
     "ctaContact": "Kontakt",
     "cards": {
-      "performances": {
+      "works": {
         "label": "Repertoire",
         "title": "Aufführungen und einladbare Produktionen",
         "text": "Wir präsentieren ausgewählte Arbeiten, die an unterschiedlichen Orten und in verschiedenen Kooperationen realisiert werden können.",
-        "link": "Weiter zu den Aufführungen"
+        "link": "Weiter zu den Werken"
       },
       "ensemble": {
         "label": "Menschen",
@@ -40,10 +40,10 @@
     "introduction": "Vorstellung"
   },
   "member": {
-    "relatedPerformances": "Verbundene Aufführungen"
+    "relatedWorks": "Verwandte Werke"
   },
-  "performances": {
-    "back": "← Zurück zu den Aufführungen",
+  "works": {
+    "back": "← Zurück zu den Werken",
     "members": "Mitwirkende",
     "credits": "Wichtige Mitwirkende und Besetzung"
   },

@@ -1,0 +1,38 @@
+<section class="works-page">
+  <h1>{{ 'nav.works' | translate }}</h1>
+
+  <div class="works-grid">
+    <a
+      *ngFor="let work of works"
+      class="works-grid__link"
+      [routerLink]="['/munkak', work.slug]"
+    >
+      <article class="work-card">
+        <div
+          class="work-card__image"
+          *ngIf="work.imageUrl; else placeholder"
+        >
+          <img
+            [src]="work.imageUrl || '/assets/images/placeholder.jpg'"
+            [alt]="work.title[currentLanguage]"
+            class="work-card__img"
+          />
+        </div>
+
+        <ng-template #placeholder>
+          <div class="work-card__image work-card__image--placeholder"></div>
+        </ng-template>
+
+        <div class="work-card__content">
+          <h2 class="work-card__title">
+            {{ work.title[currentLanguage] }}
+          </h2>
+
+          <p *ngIf="work.shortDescription">
+            {{ work.shortDescription[currentLanguage] }}
+          </p>
+        </div>
+      </article>
+    </a>
+  </div>
+</section>

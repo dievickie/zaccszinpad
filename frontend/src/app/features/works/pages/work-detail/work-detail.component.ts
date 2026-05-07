@@ -3,19 +3,19 @@ import { Component } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
-import { PROCESSED_PERFORMANCES, ProcessedPerformance } from '../../data/performances.processed';
+import { PROCESSED_works, ProcessedWork } from '../../data/works.processed';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 
 @Component({
-  selector: 'app-performance-detail',
+  selector: 'app-work-detail',
   standalone: true,
   imports: [CommonModule, RouterModule, TranslateModule],
-  templateUrl: './performance-detail.component.html',
-  styleUrls: ['./performance-detail.component.scss']
+  templateUrl: './work-detail.component.html',
+  styleUrls: ['./work-detail.component.scss']
 })
-export class PerformanceDetailComponent {
-  protected performance?: ProcessedPerformance;
+export class WorkDetailComponent {
+  protected work?: ProcessedWork;
   protected currentLanguage: AppLanguage = 'hu';
 
   constructor(
@@ -31,14 +31,14 @@ export class PerformanceDetailComponent {
 
     const slug = this.route.snapshot.paramMap.get('slug');
 
-    const found = PROCESSED_PERFORMANCES.find((p) => p.slug === slug);
+    const found = PROCESSED_works.find((p) => p.slug === slug);
 
     if (!found) {
-      void this.router.navigate(['/eloadasok']);
+      void this.router.navigate(['/munkak']);
       return;
     }
 
-    this.performance = found;
+    this.work = found;
   }
 
   private setLanguage(): void {

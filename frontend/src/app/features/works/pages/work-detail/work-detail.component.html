@@ -1,0 +1,65 @@
+<section *ngIf="work as work" class="work-detail">
+  <div class="work-detail__shell">
+
+    <a routerLink="/munkak" class="work-detail__back">
+      {{ 'works.back' | translate }}
+    </a>
+
+    <h1 class="work-detail__title">
+      {{ work.title[currentLanguage] }}
+    </h1>
+
+    <p *ngIf="work.shortDescription">
+      {{ work.shortDescription[currentLanguage] }}
+    </p>
+
+    <div *ngIf="work.longDescription?.length">
+      <p *ngFor="let paragraph of work.longDescription">
+        {{ paragraph[currentLanguage] }}
+      </p>
+    </div>
+
+    <section *ngIf="work.creditGroups?.length">
+      <h2 class="work-detail__section-title">
+        {{ 'works.credits' | translate }}
+      </h2>
+
+      <div class="work-detail__credits">
+        <div
+          class="work-detail__credit-row"
+          *ngFor="let group of work.creditGroups"
+        >
+          <span class="work-detail__credit-label">
+            {{ group.label[currentLanguage] }}:
+          </span>
+
+          <span class="work-detail__credit-names">
+            <ng-container *ngFor="let person of group.names; let last = last">
+              <a
+                *ngIf="person.memberSlug; else plainName"
+                [routerLink]="['/tarsulat', person.memberSlug]"
+                class="work-detail__credit-link"
+              >
+                {{ person.name }}
+              </a>
+
+              <ng-template #plainName>
+                <span>{{ person.name }}</span>
+              </ng-template>
+                <!-- fallback to name if memberSlug is missing, but still render as link if memberSlug exists -->
+              <span *ngIf="!last">{{ group.separator || ', ' }}</span>
+            </ng-container>
+          </span>
+        </div>
+      </div>
+
+      <p
+        *ngIf="work.creditsNote"
+        class="work-detail__credits-note"
+      >
+        {{ work.creditsNote[currentLanguage] }}
+      </p>
+    </section>
+
+  </div>
+</section>

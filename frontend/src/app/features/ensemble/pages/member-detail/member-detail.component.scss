@@ -71,12 +71,12 @@
   line-height: 1.6;
 }
 
-.member-detail__related-performances {
+.member-detail__related-works {
   display: grid;
   gap: 0.75rem;
 }
 
-.member-detail__related-performance-link {
+.member-detail__related-work-link {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
@@ -87,7 +87,7 @@
   border-radius: 0.75rem;
 }
 
-.member-detail__related-performance-link:hover {
+.member-detail__related-work-link:hover {
   text-decoration: underline;
 }
 

@@ -2,7 +2,7 @@
   "nav": {
     "opening": "nyitány",
     "ensemble": "társulat",
-    "performances": "darabok",
+    "works": "darabok",
     "programs": "események",
     "contact": "kontakt"
   },
@@ -13,7 +13,7 @@
     "ctaPerformances": "Előadásaink",
     "ctaContact": "Kontakt",
     "cards": {
-      "performances": {
+      "works": {
         "label": "Repertoár",
         "title": "Előadások és meghívható produkciók",
         "text": "Olyan kiemelt munkáinkat mutatjuk be, amelyek különböző helyszíneken és együttműködésekben is megvalósíthatók.",
@@ -40,9 +40,9 @@
     "introduction": "Bemutatkozás"
   },
   "member": {
-    "relatedPerformances": "Kapcsolódó előadások"
+    "relatedWorks": "Kapcsolódó előadások"
   },
-  "performances": {
+  "works": {
     "back": "← Vissza az előadásokhoz",
     "members": "Alkotók és szereplők",
     "credits": "Főbb alkotók és szereplők"

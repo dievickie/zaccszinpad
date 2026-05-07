@@ -2,7 +2,7 @@
   "nav": {
     "opening": "stage",
     "ensemble": "ensemble",
-    "performances": "performances",
+    "works": "works",
     "programs": "events",
     "contact": "contact"
   },
@@ -13,11 +13,11 @@
     "ctaPerformances": "Our performances",
     "ctaContact": "Contact",
     "cards": {
-      "performances": {
-        "label": "Repertoire",
+      "works": {
+        "label": "Repertory",
         "title": "Performances and productions available for invitation",
-        "text": "We present selected works that can be realised in different venues and collaborative settings.",
-        "link": "Go to performances"
+        "text": "We present our selected works that can be realised in different venues and collaborations.",
+        "link": "Go to works"
       },
       "ensemble": {
         "label": "People",
@@ -40,10 +40,10 @@
     "introduction": "Introduction"
   },
   "member": {
-    "relatedPerformances": "Related performances"
+    "relatedWorks": "Related works"
   },
-  "performances": {
-    "back": "← Back to performances",
+  "works": {
+    "back": "← Back to works",
     "members": "Contributors",
     "credits": "Main creators and cast"
   },

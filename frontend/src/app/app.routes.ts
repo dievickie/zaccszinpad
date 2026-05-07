@@ -22,8 +22,8 @@ export const routes: Routes = [
   {
     path: 'eloadasok',
     loadChildren: () =>
-      import('./features/performances/performances.routes')
-        .then(m => m.PERFORMANCES_ROUTES)
+      import('./features/works/works.routes')
+        .then(m => m.works_ROUTES)
   },
   
   { path: 'kapcsolat', component: ContactComponent },

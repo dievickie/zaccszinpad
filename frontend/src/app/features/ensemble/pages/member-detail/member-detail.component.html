@@ -48,19 +48,19 @@
         *ngIf="relatedPerformances.length"
       >
         <h2 class="member-detail__section-title">
-          {{ 'nav.performances' | translate }}
+          {{ 'nav.works' | translate }}
         </h2>
 
-        <div class="member-detail__related-performances">
+        <div class="member-detail__related-works">
           <a
-            *ngFor="let performance of relatedPerformances"
-            class="member-detail__related-performance-link"
-            [routerLink]="['/eloadasok', performance.slug]"
+            *ngFor="let work of relatedWorks"
+            class="member-detail__related-work-link"
+            [routerLink]="['/munkak', work.slug]"
           >
-            <strong>{{ performance.title[currentLanguage] }}</strong>
+            <strong>{{ work.title[currentLanguage] }}</strong>
 
-            <span *ngIf="performance.shortDescription">
-              {{ performance.shortDescription[currentLanguage] }}
+            <span *ngIf="work.shortDescription">
+              {{ work.shortDescription[currentLanguage] }}
             </span>
           </a>
         </div>
