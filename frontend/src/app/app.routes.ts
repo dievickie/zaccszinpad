@@ -3,7 +3,7 @@ import { HomeComponent } from './features/home/pages/home/home.component';
 import { ContactComponent } from './features/contact/pages/contact/contact.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent, pathMatch: 'full' },  
+  { path: '', component: HomeComponent, pathMatch: 'full' },
 
   {
     path: 'tarsulat',
@@ -20,14 +20,16 @@ export const routes: Routes = [
   },
 
   {
-    path: 'eloadasok',
+    path: 'munkak',
     loadChildren: () =>
       import('./features/works/works.routes')
-        .then(m => m.works_ROUTES)
+        .then(m => m.WORKS_ROUTES)
   },
-  
+
+  { path: 'eloadasok', redirectTo: 'munkak', pathMatch: 'full' },
+  { path: 'eloadasok/:slug', redirectTo: 'munkak/:slug', pathMatch: 'full' },
+
   { path: 'kapcsolat', component: ContactComponent },
 
   { path: '**', redirectTo: '' }
-
 ];

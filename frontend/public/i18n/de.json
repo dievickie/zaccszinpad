@@ -2,7 +2,7 @@
   "nav": {
     "opening": "start",
     "ensemble": "ensemble",
-    "works": "werke",
+    "works": "arbeiten",
     "programs": "programme",
     "contact": "kontakt"
   },
@@ -17,7 +17,7 @@
         "label": "Repertoire",
         "title": "Aufführungen und einladbare Produktionen",
         "text": "Wir präsentieren ausgewählte Arbeiten, die an unterschiedlichen Orten und in verschiedenen Kooperationen realisiert werden können.",
-        "link": "Weiter zu den Werken"
+        "link": "Weiter zu den Arbeiten"
       },
       "ensemble": {
         "label": "Menschen",
@@ -40,10 +40,10 @@
     "introduction": "Vorstellung"
   },
   "member": {
-    "relatedWorks": "Verwandte Werke"
+    "relatedWorks": "Verwandte Arbeiten"
   },
   "works": {
-    "back": "← Zurück zu den Werken",
+    "back": "← Zurück zu den Arbeiten",
     "members": "Mitwirkende",
     "credits": "Wichtige Mitwirkende und Besetzung"
   },

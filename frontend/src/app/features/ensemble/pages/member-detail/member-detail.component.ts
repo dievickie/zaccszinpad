@@ -8,7 +8,7 @@ import { PROCESSED_MEMBERS, ProcessedMember } from '../../data/members.processed
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 import {
-  PROCESSED_works,
+  PROCESSED_WORKS,
   ProcessedWork
 } from '../../../works/data/works.processed';
 
@@ -50,7 +50,7 @@ export class MemberDetailComponent implements OnDestroy {
 
     this.member = found;
 
-    this.relatedWorks = PROCESSED_works.filter((work) =>
+    this.relatedWorks = PROCESSED_WORKS.filter((work) =>
       work.creditGroups?.some((group) =>
         group.names?.some((person) => person.memberSlug === found.slug)
       )

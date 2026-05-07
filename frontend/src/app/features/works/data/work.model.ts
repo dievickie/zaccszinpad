@@ -2,24 +2,24 @@ export type LocalizedText = {
   [key: string]: string;
 };
 
-export interface PerformanceCreditName {
+export interface WorkCreditName {
   name: string;
   memberSlug?: string;
 }
 
-export interface PerformanceCreditGroup {
+export interface WorkCreditGroup {
   label: LocalizedText;
-  names: PerformanceCreditName[];
+  names: WorkCreditName[];
   separator?: string;
 }
 
-export interface Performance {
+export interface Work {
   id: string;
   slug?: string;
   title: LocalizedText;
   shortDescription?: LocalizedText;
   longDescription?: LocalizedText[];
   imageUrl?: string;
-  creditGroups?: PerformanceCreditGroup[];
+  creditGroups?: WorkCreditGroup[];
   creditsNote?: LocalizedText;
 }

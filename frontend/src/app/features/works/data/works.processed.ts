@@ -6,9 +6,7 @@ export interface ProcessedWork extends Work {
   slug: string;
 }
 
-export const PROCESSED_works: ProcessedWork[] = works.map(
-  (work) => ({
-    ...performance,
-    slug: work.slug ?? toSlug(work.title['hu'])
-  })
-);
+export const PROCESSED_WORKS: ProcessedWork[] = works.map((work) => ({
+  ...work,
+  slug: work.slug ?? toSlug(work.title['hu'])
+}));

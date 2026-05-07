@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
-import { PROCESSED_works, ProcessedWork } from '../../data/works.processed';
+import { PROCESSED_WORKS, ProcessedWork } from '../../data/works.processed';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 
@@ -14,9 +15,11 @@ import { AppLanguage } from '../../../../core/i18n/i18n.types';
   templateUrl: './work-detail.component.html',
   styleUrls: ['./work-detail.component.scss']
 })
-export class WorkDetailComponent {
+export class WorkDetailComponent implements OnDestroy {
   protected work?: ProcessedWork;
   protected currentLanguage: AppLanguage = 'hu';
+
+  private readonly langChangeSubscription: Subscription;
 
   constructor(
     private readonly route: ActivatedRoute,
@@ -25,13 +28,13 @@ export class WorkDetailComponent {
   ) {
     this.setLanguage();
 
-    this.translate.onLangChange.subscribe(() => {
+    this.langChangeSubscription = this.translate.onLangChange.subscribe(() => {
       this.setLanguage();
     });
 
     const slug = this.route.snapshot.paramMap.get('slug');
 
-    const found = PROCESSED_works.find((p) => p.slug === slug);
+    const found = PROCESSED_WORKS.find((work) => work.slug === slug);
 
     if (!found) {
       void this.router.navigate(['/munkak']);
@@ -39,6 +42,10 @@ export class WorkDetailComponent {
     }
 
     this.work = found;
+  }
+
+  ngOnDestroy(): void {
+    this.langChangeSubscription.unsubscribe();
   }
 
   private setLanguage(): void {

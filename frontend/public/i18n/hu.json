@@ -2,7 +2,7 @@
   "nav": {
     "opening": "nyitány",
     "ensemble": "társulat",
-    "works": "darabok",
+    "works": "munkák",
     "programs": "események",
     "contact": "kontakt"
   },
@@ -15,9 +15,9 @@
     "cards": {
       "works": {
         "label": "Repertoár",
-        "title": "Előadások és meghívható produkciók",
+        "title": "Munkák és meghívható produkciók",
         "text": "Olyan kiemelt munkáinkat mutatjuk be, amelyek különböző helyszíneken és együttműködésekben is megvalósíthatók.",
-        "link": "Tovább az előadásokhoz"
+        "link": "Tovább a munkákhoz"
       },
       "ensemble": {
         "label": "Emberek",
@@ -40,10 +40,10 @@
     "introduction": "Bemutatkozás"
   },
   "member": {
-    "relatedWorks": "Kapcsolódó előadások"
+    "relatedWorks": "Kapcsolódó munkák"
   },
   "works": {
-    "back": "← Vissza az előadásokhoz",
+    "back": "← Vissza a munkákhoz",
     "members": "Alkotók és szereplők",
     "credits": "Főbb alkotók és szereplők"
   },

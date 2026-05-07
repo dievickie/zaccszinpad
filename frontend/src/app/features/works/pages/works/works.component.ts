@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
 
-import { PROCESSED_works } from '../../data/works.processed';
+import { PROCESSED_WORKS } from '../../data/works.processed';
 import { AppLanguage } from '../../../../core/i18n/i18n.types';
 import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
 
@@ -16,7 +16,7 @@ import { mapToAppLanguage } from '../../../../core/i18n/i18n.adapter';
   styleUrls: ['./works.component.scss']
 })
 export class WorksComponent implements OnDestroy {
-  protected readonly works = PROCESSED_works;
+  protected readonly works = PROCESSED_WORKS;
   protected currentLanguage: AppLanguage = 'hu';
 
   private readonly langChangeSubscription: Subscription;

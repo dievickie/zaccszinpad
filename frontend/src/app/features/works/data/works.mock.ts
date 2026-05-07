@@ -1,4 +1,4 @@
-import { Work } from './performance.model';
+import { Work } from './work.model';
 
 export const works: Work[] = [
   {
@@ -27,9 +27,7 @@ export const works: Work[] = [
           en: 'Direction',
           de: 'Regie'
         },
-        names: [
-          { name: 'Név' }
-        ],
+        names: [{ name: 'Név' }],
         separator: ', '
       },
       {
@@ -89,9 +87,7 @@ export const works: Work[] = [
           en: 'Direction',
           de: 'Regie'
         },
-        names: [
-          { name: 'Név' }
-        ],
+        names: [{ name: 'Név' }],
         separator: ', '
       },
       {
@@ -100,10 +96,7 @@ export const works: Work[] = [
           en: 'Cast',
           de: 'Besetzung'
         },
-        names: [
-          { name: 'Név' },
-          { name: 'Név' }
-        ],
+        names: [{ name: 'Név' }, { name: 'Név' }],
         separator: ', '
       }
     ],
@@ -139,9 +132,7 @@ export const works: Work[] = [
           en: 'Music',
           de: 'Musik'
         },
-        names: [
-          { name: 'Név' }
-        ],
+        names: [{ name: 'Név' }],
         separator: ', '
       },
       {
@@ -150,10 +141,7 @@ export const works: Work[] = [
           en: 'Technical support',
           de: 'Technik'
         },
-        names: [
-          { name: 'Név' },
-          { name: 'Név' }
-        ],
+        names: [{ name: 'Név' }, { name: 'Név' }],
         separator: ', '
       }
     ]
