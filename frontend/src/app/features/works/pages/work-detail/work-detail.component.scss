@@ -4,6 +4,17 @@
   padding: 2rem 0 4rem;
 }
 
+.work-detail__poster {
+  margin: 0 0 1.5rem;
+}
+
+.work-detail__poster-image {
+  display: block;
+  width: min(100%, 720px);
+  max-height: 80vh;
+  object-fit: contain;
+}
+
 .work-detail__credit-link {
   color: inherit;
   text-decoration: underline;

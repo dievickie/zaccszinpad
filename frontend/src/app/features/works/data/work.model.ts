@@ -19,7 +19,11 @@ export interface Work {
   title: LocalizedText;
   shortDescription?: LocalizedText;
   longDescription?: LocalizedText[];
+  cardImage?: string;
+  heroImage?: string;
+  posterImage?: string;
   imageUrl?: string;
+  coverImage?: string;
   creditGroups?: WorkCreditGroup[];
   creditsNote?: LocalizedText;
 }

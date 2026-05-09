@@ -5,6 +5,14 @@
       {{ 'works.back' | translate }}
     </a>
 
+    <figure class="work-detail__poster" *ngIf="work.posterImage">
+      <img
+        class="work-detail__poster-image"
+        [src]="work.posterImage"
+        [alt]="work.title[currentLanguage]"
+      />
+    </figure>
+
     <h1 class="work-detail__title">
       {{ work.title[currentLanguage] }}
     </h1>
@@ -46,7 +54,6 @@
               <ng-template #plainName>
                 <span>{{ person.name }}</span>
               </ng-template>
-                <!-- fallback to name if memberSlug is missing, but still render as link if memberSlug exists -->
               <span *ngIf="!last">{{ group.separator || ', ' }}</span>
             </ng-container>
           </span>

@@ -3,6 +3,8 @@ import { Work } from './work.model';
 export const works: Work[] = [
   {
     id: 'diotorocske',
+    cardImage: '/assets/images/works/diotorocske.png',
+    posterImage: '/assets/images/works/diotorocske.jpg',
     title: {
       hu: 'Diótörőcske',
       en: 'Little Nutcracker',
@@ -63,8 +65,10 @@ export const works: Work[] = [
   },
   {
     id: 'a-berekben',
+    cardImage: '/assets/images/works/berekben.png',
+    posterImage: '/assets/images/works/berekben.jpg',
     title: {
-      hu: 'A berekben',
+      hu: 'Berekben',
       en: 'In the Marsh',
       de: 'Im Schilf'
     },
@@ -108,6 +112,8 @@ export const works: Work[] = [
   },
   {
     id: 'pomade',
+    cardImage: '/assets/images/works/pomade.png',
+    posterImage: '/assets/images/works/pomade.jpg',
     title: {
       hu: 'Pomádé',
       en: 'Pomade',
@@ -145,5 +151,44 @@ export const works: Work[] = [
         separator: ', '
       }
     ]
+  },
+  {
+    id: 'isleri-idok-pilvax',
+    cardImage: '/assets/images/works/isleri-idok.png',
+    posterImage: '/assets/images/works/isleri-idok.jpg',
+    title: {
+      hu: 'Isleri idök - látogatás a Pilvax büfében',
+      en: 'Isleri idök - Visit to the Pilvax Buffet',
+      de: 'Isleri idök - Besuch im Pilvax-Buffet'
+    }
+  },
+  {
+    id: 'latetrip-2',
+    cardImage: '/assets/images/works/latetrip.png',
+    posterImage: '/assets/images/works/latetrip.jpg',
+    title: {
+      hu: 'latetrip2.0',
+      en: 'latetrip2.0',
+      de: 'latetrip2.0'
+    }
+  },
+  {
+    id: 'galagonya',
+    cardImage: '/assets/images/works/galagonya.png',
+    title: {
+      hu: 'Galagonya',
+      en: 'Galagonya',
+      de: 'Galagonya'
+    }
+  },
+  {
+    id: 'jozsef-attila-est',
+    cardImage: '/assets/images/works/jozsef-attila-est.png',
+    posterImage: '/assets/images/works/jozsef-attila-est.jpg',
+    title: {
+      hu: 'József Attila est',
+      en: 'József Attila evening',
+      de: 'József-Attila-Abend'
+    }
   }
 ];
